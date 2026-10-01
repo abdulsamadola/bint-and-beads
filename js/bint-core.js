@@ -263,8 +263,8 @@
       colours: ['Black', 'Silver'],
       sizes: ['S (17cm)', 'M (18.5cm)', 'L (20cm)', 'XL (21.5cm)'],
       images: [
-        'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=80',
-        'https://images.unsplash.com/photo-1611591475103-4fa1b7765a7f?auto=format&fit=crop&w=900&q=80'
+        'https://images.unsplash.com/photo-1611591475103-4fa1b7765a7f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=900&q=80'
       ],
       rating: 4.9,
       reviewCount: 29,
@@ -1142,8 +1142,32 @@
           </button>
 
           <a href="index.html" class="header-brand-logo-link" aria-label="Bint and Beads Home">
-            <img class="brand-logo-img logo-dark" src="assets/images/logo.svg" alt="BINT &amp; BEADS — Lagos Handcrafted Luxury">
-            <img class="brand-logo-img logo-light" src="assets/images/logo-light.svg" alt="BINT &amp; BEADS — Lagos Handcrafted Luxury">
+            <svg class="brand-logo-svg" viewBox="0 0 320 64" width="220" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="headerLogoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F5E8C7" />
+                  <stop offset="50%" stop-color="#C6A15B" />
+                  <stop offset="100%" stop-color="#8C6527" />
+                </linearGradient>
+              </defs>
+              <!-- Left Monogram Icon -->
+              <g transform="translate(4, 4) scale(0.56)">
+                <circle cx="50" cy="50" r="44" stroke="url(#headerLogoGold)" stroke-width="2" stroke-dasharray="1 8" stroke-linecap="round"/>
+                <circle cx="50" cy="50" r="39" stroke="url(#headerLogoGold)" stroke-width="1" opacity="0.6"/>
+                <circle cx="50" cy="6" r="3.5" fill="url(#headerLogoGold)"/>
+                <circle cx="94" cy="50" r="3.5" fill="url(#headerLogoGold)"/>
+                <circle cx="50" cy="94" r="3.5" fill="url(#headerLogoGold)"/>
+                <circle cx="6" cy="50" r="3.5" fill="url(#headerLogoGold)"/>
+                <text x="22" y="62" font-family="'Cormorant Garamond', Georgia, serif" font-size="40" font-weight="400" fill="url(#headerLogoGold)">B</text>
+                <text x="44" y="64" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-style="italic" font-weight="300" fill="currentColor" stroke="url(#headerLogoGold)" stroke-width="0.8">B</text>
+                <circle cx="48" cy="48" r="2.5" fill="url(#headerLogoGold)"/>
+              </g>
+              <!-- Brand Typography -->
+              <g transform="translate(74, 34)">
+                <text x="0" y="0" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="400" letter-spacing="4" fill="currentColor">BINT <tspan fill="url(#headerLogoGold)" font-style="italic" font-weight="300">&amp;</tspan> BEADS</text>
+                <text x="2" y="15" font-family="'Manrope', -apple-system, sans-serif" font-size="7.5" font-weight="600" letter-spacing="3.5" fill="#C6A15B">LAGOS &bull; HANDCRAFTED LUXURY</text>
+              </g>
+            </svg>
           </a>
 
           <nav class="header-nav" aria-label="Main Navigation">
@@ -1222,7 +1246,30 @@
 
           <div class="footer-top-grid">
             <div class="footer-brand-col">
-              <img src="assets/images/logo-light.svg" alt="BINT &amp; BEADS" style="height: 48px; margin-bottom: 16px;">
+              <svg class="brand-logo-svg" viewBox="0 0 320 64" width="220" height="44" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 16px;">
+                <defs>
+                  <linearGradient id="footerLogoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F5E8C7" />
+                    <stop offset="50%" stop-color="#C6A15B" />
+                    <stop offset="100%" stop-color="#8C6527" />
+                  </linearGradient>
+                </defs>
+                <g transform="translate(4, 4) scale(0.56)">
+                  <circle cx="50" cy="50" r="44" stroke="url(#footerLogoGold)" stroke-width="2" stroke-dasharray="1 8" stroke-linecap="round"/>
+                  <circle cx="50" cy="50" r="39" stroke="url(#footerLogoGold)" stroke-width="1" opacity="0.6"/>
+                  <circle cx="50" cy="6" r="3.5" fill="url(#footerLogoGold)"/>
+                  <circle cx="94" cy="50" r="3.5" fill="url(#footerLogoGold)"/>
+                  <circle cx="50" cy="94" r="3.5" fill="url(#footerLogoGold)"/>
+                  <circle cx="6" cy="50" r="3.5" fill="url(#footerLogoGold)"/>
+                  <text x="22" y="62" font-family="'Cormorant Garamond', Georgia, serif" font-size="40" font-weight="400" fill="url(#footerLogoGold)">B</text>
+                  <text x="44" y="64" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-style="italic" font-weight="300" fill="#FFFFFF" stroke="url(#footerLogoGold)" stroke-width="0.8">B</text>
+                  <circle cx="48" cy="48" r="2.5" fill="url(#footerLogoGold)"/>
+                </g>
+                <g transform="translate(74, 34)">
+                  <text x="0" y="0" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="400" letter-spacing="4" fill="#FFFFFF">BINT <tspan fill="url(#footerLogoGold)" font-style="italic" font-weight="300">&amp;</tspan> BEADS</text>
+                  <text x="2" y="15" font-family="'Manrope', -apple-system, sans-serif" font-size="7.5" font-weight="600" letter-spacing="3.5" fill="#C6A15B">LAGOS &bull; HANDCRAFTED LUXURY</text>
+                </g>
+              </svg>
               <p>Dedicated to elevating the sacred tradition of African bead craftsmanship. Each piece is thoughtfully composed by hand in our Lagos atelier to reflect individuality, poise, and personal heritage.</p>
               <div class="text-meta" style="color: var(--color-gold);">LAGOS &bull; LONDON &bull; ACCRA</div>
             </div>

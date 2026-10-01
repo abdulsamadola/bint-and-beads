@@ -434,3 +434,55 @@
 .gallery-item:hover .gallery-overlay {
   opacity: 1;
 }
+
+/* ==========================================================================
+   HOMEPAGE PRODUCT GRID CONSTRAINTS
+   ========================================================================== */
+.product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 32px 24px !important;
+  width: 100% !important;
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px 16px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px 12px !important;
+  }
+}
+
+.product-card {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.product-card-image-wrap,
+.product-card-media,
+.product-img-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 4 / 5 !important;
+  max-height: 420px !important;
+  overflow: hidden !important;
+  border-radius: var(--radius-sm) !important;
+  background-color: var(--color-cream) !important;
+}
+
+.product-card-image,
+.product-img-primary,
+.product-img-hover {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}

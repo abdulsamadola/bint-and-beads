@@ -7,8 +7,13 @@
 
   function initHome() {
     const products = (window.BINT && window.BINT.PRODUCTS) || [];
-    const isWishlisted = (window.BINT && window.BINT.state && window.BINT.state.isWishlisted) || (() => false);
-    const renderCard = (window.BINT && window.BINT.utils && window.BINT.utils.renderProductCard) || defaultRenderCard;
+    const isWishlisted = (window.BINT && window.BINT.state && (window.BINT.state.isProductWishlisted || window.BINT.state.isWishlisted)) || (() => false);
+    const renderCard = (p, opts) => {
+      if (window.BINT && window.BINT.utils && window.BINT.utils.renderProductCard) {
+        return window.BINT.utils.renderProductCard(p, opts);
+      }
+      return defaultRenderCard(p, opts);
+    };
 
     renderNewArrivals(products, renderCard, isWishlisted);
     renderBestsellers(products, renderCard, isWishlisted);
@@ -23,28 +28,28 @@
       : `₦${Number(p.price).toLocaleString()}`;
 
     return `
-      <article class="product-card" data-product-id="${p.id}">
-        <div class="product-card-media">
-          ${p.badge ? `<span class="badge ${p.badge === 'NEW' ? 'badge-new' : (p.badge === 'LIMITED' ? 'badge-limited' : 'badge-gold')}">${p.badge}</span>` : ''}
-          <button type="button" class="btn-wishlist ${wishlisted ? 'active' : ''}" data-wishlist-id="${p.id}" aria-label="Add ${p.name} to wishlist">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="${wishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+      <article class="product-card" data-product-id="${p.id}" data-category="${p.category || 'bracelets'}">
+        <div class="product-card-image-wrap">
+          ${p.badge ? `<div class="product-card-badges"><span class="badge ${p.badge === 'NEW' ? 'badge-new' : (p.badge === 'LIMITED' ? 'badge-limited' : 'badge-gold')}">${p.badge}</span></div>` : ''}
+          <button type="button" class="product-card-wishlist ${wishlisted ? 'active' : ''}" data-wishlist-id="${p.id}" aria-label="Add ${p.name} to wishlist">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="${wishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.8">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
           </button>
-          <a href="product.html?id=${p.id}" class="product-img-wrapper">
-            <img src="${p.images[0]}" alt="${p.name}" class="product-img-primary" loading="lazy">
-            ${p.images[1] ? `<img src="${p.images[1]}" alt="${p.name} alternate view" class="product-img-hover" loading="lazy">` : ''}
+          <a href="product.html?id=${p.id}" class="product-card-link-wrap">
+            <img src="${p.images[0]}" alt="${p.name}" class="product-card-image primary-img" loading="lazy">
+            ${p.images[1] ? `<img src="${p.images[1]}" alt="${p.name} alternate view" class="product-card-image secondary-img" loading="lazy">` : ''}
           </a>
-          <button type="button" class="btn-quick-add" data-quick-add-id="${p.id}">
-            + Quick Add &bull; ${formattedPrice}
+          <button type="button" class="product-card-quick-add" data-quick-add="${p.id}">
+            Quick Add &bull; ${formattedPrice}
           </button>
         </div>
         <div class="product-card-info">
-          <span class="product-category">${(p.category || 'Accessories').toUpperCase()}</span>
-          <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
-          <div class="product-price-row">
-            <span class="product-price">${formattedPrice}</span>
-            ${p.originalPrice ? `<span class="product-original-price">₦${Number(p.originalPrice).toLocaleString()}</span>` : ''}
+          <span class="product-card-category">${(p.category || 'Accessories').toUpperCase()}</span>
+          <h3 class="product-card-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
+          <div class="product-card-price-row">
+            <span class="price-current">${formattedPrice}</span>
+            ${p.originalPrice ? `<span class="price-old">₦${Number(p.originalPrice).toLocaleString()}</span>` : ''}
           </div>
         </div>
       </article>
