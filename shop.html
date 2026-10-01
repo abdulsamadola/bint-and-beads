@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Handcrafted Accessories | BINT &amp; BEADS</title>
+  <meta name="description" content="Browse handcrafted luxury beaded bracelets, waist beads, baroque pearl necklaces, sculpted beaded bags, and personalized accessories from Bint & Beads.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/emblem.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages/shop.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside id="bint-announcement-bar"></aside>
+
+  <!-- Global Header -->
+  <header id="bint-header"></header>
+
+  <main id="main-content">
+    <!-- Shop Header Banner -->
+    <section class="shop-header-banner">
+      <div class="container">
+        <div class="shop-banner-inner">
+          <span class="text-meta" style="color: var(--color-gold);">THE ATELIER CATALOGUE</span>
+          <h1>SHOP THE COLLECTION</h1>
+          <p>Every piece is individually handcrafted from cold-cut crystals, freshwater pearls, and warm gold accents in small studio editions.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="breadcrumbs-separator">/</span>
+        <span class="breadcrumbs-current">Shop</span>
+      </nav>
+
+      <!-- Shop Controls Bar -->
+      <div class="shop-controls-bar">
+        <div class="shop-count-text" id="shop-product-count">
+          Showing <span class="shop-count-highlight">24</span> handcrafted pieces
+        </div>
+
+        <div class="shop-actions-group">
+          <button type="button" class="filter-mobile-trigger" id="filter-mobile-trigger">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+            </svg>
+            Filter Pieces
+          </button>
+
+          <div class="shop-sort-wrap">
+            <label for="shop-sort-select" class="shop-sort-label">Sort:</label>
+            <select id="shop-sort-select" class="shop-sort-select">
+              <option value="featured">Featured Curations</option>
+              <option value="newest">Newest Arrivals</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Filter Chips -->
+      <div id="active-filters-bar" class="active-filters-bar"></div>
+
+      <!-- Shop Layout: Sidebar + Grid -->
+      <div class="shop-layout-grid" style="padding-bottom: 80px;">
+        <!-- Desktop Filter Sidebar -->
+        <aside class="shop-sidebar" aria-label="Filters">
+          <!-- Category Filter -->
+          <div class="filter-group">
+            <div class="filter-group-title">Category</div>
+            <div class="filter-list">
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-category="bracelets">
+                <span>Bracelets</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-category="necklaces">
+                <span>Necklaces &amp; Chokers</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-category="waist-beads">
+                <span>Waist Beads</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-category="bags">
+                <span>Beaded Bags</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-category="anklets">
+                <span>Anklets</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-category="phone-charms">
+                <span>Phone Charms</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-category="keychains">
+                <span>Keychains</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-category="gift-sets">
+                <span>Gift Sets</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Collection Filter -->
+          <div class="filter-group">
+            <div class="filter-group-title">Collection</div>
+            <div class="filter-list">
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-collection="signature">
+                <span>The Signature Collection</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-collection="noir">
+                <span>The Noir Collection</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-collection="bridal">
+                <span>The Bridal Edit</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-collection="everyday">
+                <span>Everyday Bint</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-collection="gifts">
+                <span>The Gift Edit</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Price Filter -->
+          <div class="filter-group">
+            <div class="filter-group-title">Price Range</div>
+            <div class="filter-list">
+              <label class="filter-item-label">
+                <input type="radio" name="price_range" class="filter-checkbox" data-filter-price="under-30k">
+                <span>Under ₦30,000</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="radio" name="price_range" class="filter-checkbox" data-filter-price="30k-60k">
+                <span>₦30,000 – ₦60,000</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="radio" name="price_range" class="filter-checkbox" data-filter-price="above-60k">
+                <span>Above ₦60,000</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Color Palette Filter -->
+          <div class="filter-group">
+            <div class="filter-group-title">Colour Tone</div>
+            <div class="filter-color-palette">
+              <button type="button" class="color-filter-btn" data-color="Black" style="background-color: #111111;" title="Black"></button>
+              <button type="button" class="color-filter-btn" data-color="Gold" style="background-color: #C6A15B;" title="Gold"></button>
+              <button type="button" class="color-filter-btn" data-color="Silver" style="background-color: #D4D4D8;" title="Silver"></button>
+              <button type="button" class="color-filter-btn" data-color="White" style="background-color: #FFFFFF;" title="White"></button>
+              <button type="button" class="color-filter-btn" data-color="Cream" style="background-color: #F5EFEB;" title="Cream"></button>
+              <button type="button" class="color-filter-btn" data-color="Emerald" style="background-color: #1E5838;" title="Emerald"></button>
+              <button type="button" class="color-filter-btn" data-color="Royal Blue" style="background-color: #1E3A8A;" title="Royal Blue"></button>
+              <button type="button" class="color-filter-btn" data-color="Burgundy" style="background-color: #6B1D2F;" title="Burgundy"></button>
+              <button type="button" class="color-filter-btn" data-color="Brown" style="background-color: #784D2B;" title="Brown"></button>
+            </div>
+          </div>
+
+          <!-- Availability & Customization -->
+          <div class="filter-group" style="border-bottom: none;">
+            <div class="filter-group-title">Availability &amp; Style</div>
+            <div class="filter-list">
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-ready="true">
+                <span>Ready to Ship Immediately</span>
+              </label>
+              <label class="filter-item-label">
+                <input type="checkbox" class="filter-checkbox" data-filter-custom="true">
+                <span>Customisable Initial / Name</span>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Grid (Pre-populated with rich items so it is NEVER blank) -->
+        <section aria-label="Products Catalog">
+          <div class="product-grid" id="shop-product-grid">
+            <!-- 01: Zara Bracelet -->
+            <article class="product-card" data-product-id="1" data-category="bracelets">
+              <div class="product-card-image-wrap">
+                <div class="product-card-badges"><span class="badge badge-bestseller">BESTSELLER</span></div>
+                <button type="button" class="product-card-wishlist" data-wishlist-id="1" aria-label="Save Zara Noir to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <a href="product.html?id=1" class="product-card-link-wrap">
+                  <img class="product-card-image primary-img" src="https://images.unsplash.com/photo-1611591475103-4fa1b7765a7f?auto=format&fit=crop&w=900&q=80" alt="Zara Noir &amp; Gold Bracelet" onerror="this.src='assets/images/emblem.svg'">
+                  <img class="product-card-image secondary-img" src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80" alt="Zara Noir view 2">
+                </a>
+                <button type="button" class="product-card-quick-add" data-quick-add="1">Quick Add &bull; ₦35,000</button>
+              </div>
+              <div class="product-card-info">
+                <span class="product-card-category">Bracelets</span>
+                <h3 class="product-card-title"><a href="product.html?id=1">Zara Noir &amp; Gold Bracelet</a></h3>
+                <div class="product-card-price-row"><span class="price-current">₦35,000</span></div>
+              </div>
+            </article>
+
+            <!-- 02: Amina Choker -->
+            <article class="product-card" data-product-id="2" data-category="necklaces">
+              <div class="product-card-image-wrap">
+                <div class="product-card-badges"><span class="badge badge-new">NEW</span></div>
+                <button type="button" class="product-card-wishlist" data-wishlist-id="2" aria-label="Save Amina to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <a href="product.html?id=2" class="product-card-link-wrap">
+                  <img class="product-card-image primary-img" src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=900&q=80" alt="Amina Baroque Pearl &amp; Onyx Choker" onerror="this.src='assets/images/emblem.svg'">
+                  <img class="product-card-image secondary-img" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80" alt="Amina Choker view 2">
+                </a>
+                <button type="button" class="product-card-quick-add" data-quick-add="2">Quick Add &bull; ₦68,000</button>
+              </div>
+              <div class="product-card-info">
+                <span class="product-card-category">Necklaces</span>
+                <h3 class="product-card-title"><a href="product.html?id=2">Amina Baroque Pearl &amp; Onyx Choker</a></h3>
+                <div class="product-card-price-row"><span class="price-current">₦68,000</span> <span class="price-old">₦75,000</span></div>
+              </div>
+            </article>
+
+            <!-- 03: Leila Waist Beads -->
+            <article class="product-card" data-product-id="3" data-category="waist-beads">
+              <div class="product-card-image-wrap">
+                <div class="product-card-badges"><span class="badge badge-bestseller">BESTSELLER</span></div>
+                <button type="button" class="product-card-wishlist" data-wishlist-id="3" aria-label="Save Leila to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <a href="product.html?id=3" class="product-card-link-wrap">
+                  <img class="product-card-image primary-img" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=80" alt="Leila Amber &amp; Gold Waist Beads" onerror="this.src='assets/images/emblem.svg'">
+                </a>
+                <button type="button" class="product-card-quick-add" data-quick-add="3">Quick Add &bull; ₦32,000</button>
+              </div>
+              <div class="product-card-info">
+                <span class="product-card-category">Waist Beads</span>
+                <h3 class="product-card-title"><a href="product.html?id=3">Leila Royal Amber &amp; Gold Waist Beads</a></h3>
+                <div class="product-card-price-row"><span class="price-current">₦32,000</span></div>
+              </div>
+            </article>
+
+            <!-- 04: Safiya Handbag -->
+            <article class="product-card" data-product-id="4" data-category="bags">
+              <div class="product-card-image-wrap">
+                <div class="product-card-badges"><span class="badge badge-oneofone">ONE OF ONE</span></div>
+                <button type="button" class="product-card-wishlist" data-wishlist-id="4" aria-label="Save Safiya to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <a href="product.html?id=4" class="product-card-link-wrap">
+                  <img class="product-card-image primary-img" src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=900&q=80" alt="Safiya Architectural Beaded Handbag" onerror="this.src='assets/images/emblem.svg'">
+                </a>
+                <button type="button" class="product-card-quick-add" data-quick-add="4">Quick Add &bull; ₦95,000</button>
+              </div>
+              <div class="product-card-info">
+                <span class="product-card-category">Beaded Bags</span>
+                <h3 class="product-card-title"><a href="product.html?id=4">Safiya Architectural Beaded Handbag</a></h3>
+                <div class="product-card-price-row"><span class="price-current">₦95,000</span> <span class="price-old">₦110,000</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile Filter Drawer -->
+  <div class="filter-drawer-overlay" id="filter-drawer-overlay" aria-hidden="true">
+    <div class="filter-drawer" role="dialog" aria-modal="true" aria-label="Mobile Product Filters">
+      <div class="filter-drawer-header">
+        <h3 style="font-family: var(--font-serif); font-size: 1.35rem;">Filter Pieces</h3>
+        <button type="button" class="modal-close-btn" id="filter-drawer-close">&times;</button>
+      </div>
+      <div class="filter-drawer-body">
+        <div class="filter-group">
+          <div class="filter-group-title">Category</div>
+          <div class="filter-list">
+            <label class="filter-item-label"><input type="checkbox" class="filter-checkbox" data-filter-category="bracelets"><span>Bracelets</span></label>
+            <label class="filter-item-label"><input type="checkbox" class="filter-checkbox" data-filter-category="necklaces"><span>Necklaces</span></label>
+            <label class="filter-item-label"><input type="checkbox" class="filter-checkbox" data-filter-category="waist-beads"><span>Waist Beads</span></label>
+            <label class="filter-item-label"><input type="checkbox" class="filter-checkbox" data-filter-category="bags"><span>Beaded Bags</span></label>
+            <label class="filter-item-label"><input type="checkbox" class="filter-checkbox" data-filter-category="anklets"><span>Anklets</span></label>
+            <label class="filter-item-label"><input type="checkbox" class="filter-checkbox" data-filter-category="phone-charms"><span>Phone Charms</span></label>
+            <label class="filter-item-label"><input type="checkbox" class="filter-checkbox" data-filter-category="gift-sets"><span>Gift Sets</span></label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group-title">Price Range</div>
+          <div class="filter-list">
+            <label class="filter-item-label"><input type="radio" name="mobile_price" class="filter-checkbox" data-filter-price="under-30k"><span>Under ₦30,000</span></label>
+            <label class="filter-item-label"><input type="radio" name="mobile_price" class="filter-checkbox" data-filter-price="30k-60k"><span>₦30,000 – ₦60,000</span></label>
+            <label class="filter-item-label"><input type="radio" name="mobile_price" class="filter-checkbox" data-filter-price="above-60k"><span>Above ₦60,000</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="filter-drawer-footer">
+        <button type="button" class="btn btn-primary btn-block" id="filter-drawer-apply">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer id="bint-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="js/bint-core.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

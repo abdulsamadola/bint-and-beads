@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" fill="none">
+  <defs>
+    <linearGradient id="logoLightGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E8C7" />
+      <stop offset="50%" stop-color="#C6A15B" />
+      <stop offset="100%" stop-color="#9C7330" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Monogram Icon -->
+  <g transform="translate(4, 4) scale(0.56)">
+    <!-- Outer beaded ring -->
+    <circle cx="50" cy="50" r="44" stroke="url(#logoLightGold)" stroke-width="2" stroke-dasharray="1 8" stroke-linecap="round"/>
+    <circle cx="50" cy="50" r="39" stroke="url(#logoLightGold)" stroke-width="1" opacity="0.6"/>
+    <circle cx="50" cy="6" r="3.5" fill="url(#logoLightGold)"/>
+    <circle cx="94" cy="50" r="3.5" fill="url(#logoLightGold)"/>
+    <circle cx="50" cy="94" r="3.5" fill="url(#logoLightGold)"/>
+    <circle cx="6" cy="50" r="3.5" fill="url(#logoLightGold)"/>
+    
+    <!-- Monogram letters -->
+    <text x="22" y="62" font-family="'Cormorant Garamond', Georgia, serif" font-size="40" font-weight="400" fill="url(#logoLightGold)">B</text>
+    <text x="44" y="64" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-style="italic" font-weight="300" fill="#FFFFFF" stroke="url(#logoLightGold)" stroke-width="0.8">B</text>
+    <circle cx="48" cy="48" r="2.5" fill="url(#logoLightGold)"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(74, 34)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="400" letter-spacing="4" fill="#FFFFFF">BINT <tspan fill="url(#logoLightGold)" font-style="italic" font-weight="300">&amp;</tspan> BEADS</text>
+    <text x="2" y="15" font-family="'Manrope', -apple-system, sans-serif" font-size="7.5" font-weight="600" letter-spacing="3.5" fill="#C6A15B">LAGOS &bull; HANDCRAFTED LUXURY</text>
+  </g>
+</svg>

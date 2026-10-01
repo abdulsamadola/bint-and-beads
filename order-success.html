@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed | BINT &amp; BEADS</title>
+  <meta name="description" content="Thank you for your order with Bint & Beads. Your handcrafted piece is officially in production in our Lagos atelier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/emblem.svg">
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages/checkout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside id="bint-announcement-bar"></aside>
+
+  <!-- Global Header -->
+  <header id="bint-header"></header>
+
+  <main id="main-content">
+    <div class="container-narrow section-padding">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="text-meta" style="color: var(--color-gold);">COMMISSION CONFIRMED</span>
+        <h1 style="font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-family: var(--font-serif); margin: 6px 0 12px;">
+          THANK YOU, <span id="success-customer-name">PATRON</span>.
+        </h1>
+        <p class="lead" style="max-width: 580px; margin: 0 auto; color: var(--color-grey-dark);">
+          Your piece is officially ours to create. Our artisans have received your commission schedule and have begun selecting your beads.
+        </p>
+
+        <!-- Order Reference Box -->
+        <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 20px 28px; display: inline-flex; align-items: center; gap: 16px; margin-top: 24px; box-shadow: var(--shadow-subtle);">
+          <div>
+            <span class="text-meta" style="font-size: 0.65rem;">Order Reference</span>
+            <div style="font-family: monospace; font-size: 1.35rem; font-weight: 700; color: var(--color-black);" id="success-order-ref">BB-2026-0184</div>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" id="copy-ref-btn">Copy Code</button>
+        </div>
+      </div>
+
+      <!-- Simulated 7-Step Production Timeline -->
+      <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 32px 24px; margin-bottom: 40px;">
+        <h2 style="font-family: var(--font-serif); font-size: 1.4rem; text-align: center;">Production &amp; Dispatch Timeline</h2>
+        
+        <div class="timeline-stepper">
+          <!-- Step 1: Received -->
+          <div class="timeline-step completed">
+            <div class="timeline-dot">&check;</div>
+            <span class="timeline-label">Received</span>
+          </div>
+
+          <!-- Step 2: Confirmed -->
+          <div class="timeline-step completed">
+            <div class="timeline-dot">&check;</div>
+            <span class="timeline-label">Confirmed</span>
+          </div>
+
+          <!-- Step 3: Crafting -->
+          <div class="timeline-step current">
+            <div class="timeline-dot">&#9874;</div>
+            <span class="timeline-label">Crafting</span>
+          </div>
+
+          <!-- Step 4: Quality Check -->
+          <div class="timeline-step">
+            <div class="timeline-dot">4</div>
+            <span class="timeline-label">QC Check</span>
+          </div>
+
+          <!-- Step 5: Packaged -->
+          <div class="timeline-step">
+            <div class="timeline-dot">5</div>
+            <span class="timeline-label">Packaged</span>
+          </div>
+
+          <!-- Step 6: Dispatched -->
+          <div class="timeline-step">
+            <div class="timeline-dot">6</div>
+            <span class="timeline-label">Dispatched</span>
+          </div>
+
+          <!-- Step 7: Delivered -->
+          <div class="timeline-step">
+            <div class="timeline-dot">7</div>
+            <span class="timeline-label">Delivered</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Details Summary Box -->
+      <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 32px; margin-bottom: 40px;">
+        <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border);">Commissioned Pieces</h3>
+
+        <div id="success-items-list">
+          <!-- Injected by order-success.js -->
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+          <div>
+            <span class="text-meta" style="font-size: 0.7rem;">Delivery Method</span>
+            <div id="success-delivery-summary" style="font-size: 0.85rem; color: var(--color-grey-dark); margin-top: 4px; line-height: 1.6;"></div>
+          </div>
+          <div style="text-align: right;">
+            <span class="text-meta" style="font-size: 0.7rem;">Total Paid (Demo)</span>
+            <div id="success-total" style="font-size: 1.5rem; font-weight: 700; color: var(--color-black); margin-top: 4px;">₦0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-gold btn-lg" id="success-track-btn">Track Order Status &rarr;</a>
+        <a href="shop.html" class="btn btn-secondary btn-lg">Explore More Pieces</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer id="bint-footer"></footer>
+
+  <!-- Universal Scripts -->
+  <script src="js/bint-core.js"></script>
+  <script src="js/order-success.js"></script>
+</body>
+</html>

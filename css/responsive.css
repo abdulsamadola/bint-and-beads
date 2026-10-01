@@ -1,0 +1,110 @@
+/* ==========================================================================
+   RESPONSIVE OVERRIDES & UTILITIES
+   ========================================================================== */
+
+/* Universal container padding on mobile */
+@media (max-width: 480px) {
+  :root {
+    --container-pad: 16px;
+    --header-height: 70px;
+    --announcement-height: 34px;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 0.75rem;
+  }
+
+  .brand-name {
+    font-size: 1.35rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.5rem;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header-action-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Product grid mobile 2-col with compact spacing */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px 12px !important;
+  }
+
+  .product-card-title {
+    font-size: 0.95rem !important;
+  }
+
+  .price-current {
+    font-size: 0.875rem !important;
+  }
+
+  .product-card-quick-add {
+    display: none; /* Mobile uses direct product click */
+  }
+
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+  }
+
+  .toast {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .cart-drawer {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Tablet (481px to 1023px) */
+@media (min-width: 481px) and (max-width: 1023px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 24px;
+  }
+}
+
+/* Large Screens (1440px+) */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1440px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .site-header,
+  .announcement-bar,
+  .site-footer,
+  .toast-container,
+  .btn,
+  .cart-drawer-overlay,
+  .search-modal-overlay {
+    display: none !important;
+  }
+}

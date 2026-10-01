@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="15%" y1="15%" x2="85%" y2="85%">
+      <stop offset="0%" stop-color="#E3D1A5" />
+      <stop offset="50%" stop-color="#C6A15B" />
+      <stop offset="100%" stop-color="#8C6527" />
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A67C38" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer beaded halo (16 beads symbolizing handcrafted bead strands) -->
+  <circle cx="50" cy="50" r="44" stroke="url(#goldGrad)" stroke-width="1.2" stroke-dasharray="0.5 8" stroke-linecap="round"/>
+  
+  <!-- Subtle concentric ring -->
+  <circle cx="50" cy="50" r="39" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- 4 Cardinal Bead Accents -->
+  <circle cx="50" cy="6" r="3" fill="url(#goldGrad)"/>
+  <circle cx="94" cy="50" r="3" fill="url(#goldGrad)"/>
+  <circle cx="50" cy="94" r="3" fill="url(#goldGrad)"/>
+  <circle cx="6" cy="50" r="3" fill="url(#goldGrad)"/>
+  
+  <!-- Diagonal Bead Accents -->
+  <circle cx="19" cy="19" r="2.2" fill="url(#goldGrad)"/>
+  <circle cx="81" cy="19" r="2.2" fill="url(#goldGrad)"/>
+  <circle cx="81" cy="81" r="2.2" fill="url(#goldGrad)"/>
+  <circle cx="19" cy="81" r="2.2" fill="url(#goldGrad)"/>
+
+  <!-- Interlocking Luxury Monogram "B & B" -->
+  <g transform="translate(50, 50)">
+    <!-- Central Ampersand Jewel Knot -->
+    <path d="M-1,-8 C-5,-14 -12,-11 -12,-6 C-12,0 -4,5 4,11 C8,14 10,18 7,20 C4,22 -3,21 -6,16" 
+          stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <circle cx="0" cy="0" r="2.2" fill="url(#goldGrad)"/>
+
+    <!-- Primary 'B' -->
+    <text x="-16" y="10" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400" fill="url(#goldGrad)" letter-spacing="-1">B</text>
+    
+    <!-- Mirrored / Intertwined Secondary 'B' with editorial offset -->
+    <text x="0" y="12" font-family="'Cormorant Garamond', Georgia, serif" font-size="30" font-style="italic" font-weight="300" fill="#111111" stroke="url(#goldGrad)" stroke-width="0.8">B</text>
+  </g>
+</svg>

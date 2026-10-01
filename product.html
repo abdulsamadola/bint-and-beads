@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handcrafted Beaded Piece | BINT &amp; BEADS</title>
+  <meta name="description" content="View details, craftsmanship materials, and customer reflections for this handcrafted luxury beaded accessory from Bint & Beads.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/emblem.svg">
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages/product.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside id="bint-announcement-bar"></aside>
+
+  <!-- Global Header -->
+  <header id="bint-header"></header>
+
+  <main id="main-content">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="breadcrumbs-separator">/</span>
+        <a href="shop.html" id="crumb-category">Catalogue</a>
+        <span class="breadcrumbs-separator">/</span>
+        <span class="breadcrumbs-current" id="crumb-product">Product</span>
+      </nav>
+
+      <!-- Main Product Details Grid -->
+      <div class="product-detail-layout">
+        <!-- Gallery Sticky Column -->
+        <div class="product-gallery-sticky">
+          <div class="product-main-media">
+            <img id="product-main-image" class="product-main-img" src="" alt="Handcrafted product">
+          </div>
+          <div class="product-thumbnails-list" id="product-thumbnails-list">
+            <!-- Thumbnails injected via JS -->
+          </div>
+        </div>
+
+        <!-- Purchase & Information Column -->
+        <div class="product-info-wrap">
+          <span class="product-meta-category" id="product-meta-cat">SIGNATURE COLLECTION</span>
+          <h1 class="product-detail-title" id="product-title">Loading Piece...</h1>
+
+          <div class="product-detail-rating" id="product-rating-summary">
+            <!-- Injected by product.js -->
+          </div>
+
+          <div class="product-detail-price-box">
+            <span class="product-detail-current-price" id="product-price-current">₦0</span>
+            <span class="product-detail-old-price" id="product-price-old"></span>
+            <span class="badge badge-ready" style="margin-left: auto;">Authentic Artisan Piece</span>
+          </div>
+
+          <p class="product-short-desc" id="product-short-desc"></p>
+
+          <!-- Colour Variant Selector -->
+          <div class="variant-block">
+            <div class="variant-label-row">
+              <span>Colour Shade: <strong class="variant-value-highlight" id="selected-colour-display">Default</strong></span>
+            </div>
+            <div class="colour-options-row" id="colour-options-container">
+              <!-- Colour buttons injected by JS -->
+            </div>
+          </div>
+
+          <!-- Size Variant Selector -->
+          <div class="variant-block" id="size-variant-section">
+            <div class="variant-label-row">
+              <span>Selected Dimension: <strong class="variant-value-highlight" id="selected-size-display">Standard</strong></span>
+              <a href="faq.html#sizing" style="color: var(--color-grey); text-decoration: underline; font-size: 0.7rem;">Sizing Guide</a>
+            </div>
+            <div class="size-options-row" id="size-options-container">
+              <!-- Size buttons injected by JS -->
+            </div>
+          </div>
+
+          <!-- Quantity & Add to Bag -->
+          <div class="product-add-actions">
+            <div class="qty-control">
+              <button type="button" class="qty-btn" id="qty-btn-minus" aria-label="Decrease quantity">&minus;</button>
+              <input type="number" id="product-qty-input" class="qty-input" value="1" min="1" max="10" aria-label="Selected quantity">
+              <button type="button" class="qty-btn" id="qty-btn-plus" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="add-to-bag-btn" style="flex: 1;">
+              Add to Bag &bull; Handcrafted for You
+            </button>
+
+            <button type="button" class="product-wishlist-toggle-btn" id="product-detail-wishlist-btn" aria-label="Save piece to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Custom Studio Link Callout -->
+          <div class="custom-link-banner">
+            <div>
+              <strong style="font-size: 0.85rem; display: block; font-family: var(--font-serif); font-size: 1.05rem;">Prefer personalized letters or colors?</strong>
+              <p style="font-size: 0.775rem; margin-top: 2px;">Engrave your name, choose bespoke gemstone finishes in our studio.</p>
+            </div>
+            <a href="customize.html" class="btn btn-gold btn-sm" id="customise-this-link">Customise</a>
+          </div>
+
+          <!-- WhatsApp Concierge Support -->
+          <div style="margin-bottom: 24px;">
+            <a href="#" id="product-whatsapp-inquiry" target="_blank" rel="noopener" class="btn-link" style="color: var(--color-grey-dark);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              Inquire With Concierge On WhatsApp
+            </a>
+          </div>
+
+          <!-- Product Accordions -->
+          <div class="accordion product-accordions">
+            <!-- Description -->
+            <div class="accordion-item active">
+              <div class="accordion-header">
+                <button type="button" class="accordion-trigger">
+                  <span>Description &amp; Design Notes</span>
+                  <span class="accordion-icon"></span>
+                </button>
+              </div>
+              <div class="accordion-content" id="acc-desc-content" style="max-height: 500px;"></div>
+            </div>
+
+            <!-- Materials & Gemstones -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button type="button" class="accordion-trigger">
+                  <span>Materials &amp; Composition</span>
+                  <span class="accordion-icon"></span>
+                </button>
+              </div>
+              <div class="accordion-content" id="acc-materials-content"></div>
+            </div>
+
+            <!-- Craftsmanship -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button type="button" class="accordion-trigger">
+                  <span>Artisan Craftsmanship</span>
+                  <span class="accordion-icon"></span>
+                </button>
+              </div>
+              <div class="accordion-content">
+                <p>Every Bint &amp; Beads creation is strung by hand in our Lagos studio. Beads are hand-sorted under natural daylight to ensure uniformity of facet and lustre before being securely bound using reinforced micro-threads.</p>
+              </div>
+            </div>
+
+            <!-- Care Guide -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button type="button" class="accordion-trigger">
+                  <span>Care &amp; Longevity</span>
+                  <span class="accordion-icon"></span>
+                </button>
+              </div>
+              <div class="accordion-content">
+                <p>To preserve the pristine radiance of your piece, avoid direct spraying of perfumes, concentrated body lotions, or harsh chlorine. Store flat within your complimentary Bint velvet dust pouch when resting.</p>
+              </div>
+            </div>
+
+            <!-- Delivery & Returns -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button type="button" class="accordion-trigger">
+                  <span>Delivery &amp; Courier Service</span>
+                  <span class="accordion-icon"></span>
+                </button>
+              </div>
+              <div class="accordion-content">
+                <p>Doorstep dispatch across Lagos within 24–48 hours. Nationwide deliveries fulfilled via insured logistics (2–4 business days). You may also elect studio pickup from our Victoria Island atelier at checkout.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Reviews / Reflections Section -->
+      <section class="reviews-section-wrap" id="reviews-section">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span class="text-meta">CLIENT STORIES</span>
+            <h2 style="font-size: 2.25rem;">CUSTOMER REFLECTIONS</h2>
+          </div>
+          <button type="button" class="btn btn-secondary" id="open-review-form-btn">Share Your Reflection</button>
+        </div>
+
+        <!-- Rating Summary Card -->
+        <div class="reviews-summary-grid">
+          <div>
+            <div class="rating-big-number" id="reviews-score-big">4.9</div>
+            <div class="rating-stars" id="reviews-score-stars" style="font-size: 1.25rem; margin: 8px 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div style="font-size: 0.8125rem; color: var(--color-grey-dark);" id="reviews-score-total">Based on verified client reviews</div>
+          </div>
+
+          <div class="rating-breakdown-bars">
+            <div class="rating-bar-row">
+              <span>5 Stars</span>
+              <div class="rating-progress-track"><div class="rating-progress-fill" style="width: 88%;"></div></div>
+              <span>88%</span>
+            </div>
+            <div class="rating-bar-row">
+              <span>4 Stars</span>
+              <div class="rating-progress-track"><div class="rating-progress-fill" style="width: 10%;"></div></div>
+              <span>10%</span>
+            </div>
+            <div class="rating-bar-row">
+              <span>3 Stars</span>
+              <div class="rating-progress-track"><div class="rating-progress-fill" style="width: 2%;"></div></div>
+              <span>2%</span>
+            </div>
+            <div class="rating-bar-row">
+              <span>2 Stars</span>
+              <div class="rating-progress-track"><div class="rating-progress-fill" style="width: 0%;"></div></div>
+              <span>0%</span>
+            </div>
+            <div class="rating-bar-row">
+              <span>1 Star</span>
+              <div class="rating-progress-track"><div class="rating-progress-fill" style="width: 0%;"></div></div>
+              <span>0%</span>
+            </div>
+          </div>
+
+          <div style="text-align: right; border-left: 1px solid var(--color-border); padding-left: 24px;">
+            <span class="text-meta" style="color: var(--color-gold); font-size: 0.7rem;">STUDIO PLEDGE</span>
+            <p style="font-size: 0.75rem; color: var(--color-grey-dark); margin-top: 6px;">Every reflection is genuinely reviewed by our atelier artisans.</p>
+          </div>
+        </div>
+
+        <!-- Expandable Add Review Form -->
+        <div id="review-form-wrapper" style="display: none; background: var(--color-white); border: 1px solid var(--color-border); padding: 32px; border-radius: var(--radius-sm); margin-bottom: 40px;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 16px;">Write a Reflection</h3>
+          <form id="product-review-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Your Name</label>
+                <input type="text" name="author" class="form-control" placeholder="e.g. Amina K." required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Rating</label>
+                <select name="rating" class="form-select" required>
+                  <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733; (5 - Exceptional)</option>
+                  <option value="4">&#9733;&#9733;&#9733;&#9733;&#9734; (4 - Very Pleased)</option>
+                  <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734; (3 - Good)</option>
+                  <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734; (2 - Fair)</option>
+                  <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734; (1 - Unsatisfied)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Review Headline</label>
+              <input type="text" name="title" class="form-control" placeholder="e.g. Sublime weight and beautiful packaging" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Your Review</label>
+              <textarea name="comment" class="form-textarea" placeholder="Share your experience wearing or gifting this handcrafted piece..." required></textarea>
+            </div>
+
+            <div style="display: flex; gap: 12px; justify-content: flex-end;">
+              <button type="button" class="btn btn-secondary btn-sm" id="cancel-review-btn">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm">Submit Reflection</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Reviews List -->
+        <div class="reviews-list-container" id="reviews-list-container">
+          <!-- Injected dynamically by product.js -->
+        </div>
+      </section>
+
+      <!-- Related Products -->
+      <section class="section-padding" style="border-top: 1px solid var(--color-border); margin-top: 60px;">
+        <div class="section-header">
+          <span class="text-meta">COMPLEMENTARY PIECES</span>
+          <h2>YOU MAY ALSO LOVE</h2>
+          <p>Curated to harmonize with your selected silhouette.</p>
+        </div>
+
+        <div class="product-grid" id="related-products-grid">
+          <!-- Injected dynamically by product.js -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer id="bint-footer"></footer>
+
+  <!-- Universal Scripts -->
+  <script src="js/bint-core.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Bag | BINT &amp; BEADS</title>
+  <meta name="description" content="Review your selected handcrafted beaded accessories, custom studio configurations, and luxury packaging before checkout.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/emblem.svg">
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages/cart.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside id="bint-announcement-bar"></aside>
+
+  <!-- Global Header -->
+  <header id="bint-header"></header>
+
+  <main id="main-content">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="breadcrumbs-separator">/</span>
+        <span class="breadcrumbs-current">Shopping Bag</span>
+      </nav>
+
+      <div style="margin-bottom: 24px;">
+        <span class="text-meta" style="color: var(--color-gold);">YOUR CURATION</span>
+        <h1 style="font-size: clamp(2.2rem, 3.5vw, 3rem); font-family: var(--font-serif); margin-top: 4px;">SHOPPING BAG</h1>
+      </div>
+
+      <!-- Empty State -->
+      <div id="cart-page-empty" class="empty-state" style="display: none; padding: 60px 20px;">
+        <div class="empty-state-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </div>
+        <h2 class="empty-state-title">Your bag is currently empty</h2>
+        <p class="empty-state-desc">You have not added any handcrafted pieces yet. Discover our latest collections or design a custom piece in our studio.</p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="shop.html" class="btn btn-primary">Shop The Collection</a>
+          <a href="customize.html" class="btn btn-secondary">Enter Custom Studio</a>
+        </div>
+      </div>
+
+      <!-- Cart Page Grid -->
+      <div class="cart-page-layout">
+        <!-- Left: Line Items List -->
+        <section aria-label="Cart Items">
+          <div class="cart-items-table" id="cart-page-items">
+            <!-- Rendered dynamically by cart.js -->
+          </div>
+
+          <div style="margin-top: 24px;">
+            <a href="shop.html" class="btn-link">&larr; Continue Exploring The Collection</a>
+          </div>
+        </section>
+
+        <!-- Right: Order Summary Sidebar -->
+        <aside aria-label="Order Summary">
+          <div class="order-summary-card" id="cart-page-summary">
+            <h2 class="summary-title">Order Summary</h2>
+
+            <div class="summary-row">
+              <span>Items Subtotal</span>
+              <span id="summary-subtotal" style="font-weight: 600; color: var(--color-black);">₦0</span>
+            </div>
+
+            <!-- Packaging Selector Option -->
+            <div class="cart-packaging-section">
+              <span class="text-meta" style="font-size: 0.7rem; color: var(--color-black);">Packaging Presentation</span>
+              <div class="packaging-select-list">
+                <label class="packaging-radio-card selected">
+                  <div style="display: flex; align-items: center;">
+                    <input type="radio" name="cart_packaging" value="signature" checked>
+                    <div>
+                      <strong style="font-size: 0.8125rem; display: block;">Signature Velvet Pouch</strong>
+                      <span style="font-size: 0.725rem; color: var(--color-grey);">Included complimentary</span>
+                    </div>
+                  </div>
+                  <span style="font-size: 0.75rem; font-weight: 600; color: var(--color-success);">FREE</span>
+                </label>
+
+                <label class="packaging-radio-card">
+                  <div style="display: flex; align-items: center;">
+                    <input type="radio" name="cart_packaging" value="gift-box">
+                    <div>
+                      <strong style="font-size: 0.8125rem; display: block;">Bint Keepsake Box</strong>
+                      <span style="font-size: 0.725rem; color: var(--color-grey);">Hard-shell drawer box &amp; gold card</span>
+                    </div>
+                  </div>
+                  <span style="font-size: 0.75rem; font-weight: 600;">+₦4,500</span>
+                </label>
+
+                <label class="packaging-radio-card">
+                  <div style="display: flex; align-items: center;">
+                    <input type="radio" name="cart_packaging" value="luxury-set">
+                    <div>
+                      <strong style="font-size: 0.8125rem; display: block;">Bespoke Luxury Gift Suite</strong>
+                      <span style="font-size: 0.725rem; color: var(--color-grey);">Wax seal &amp; calligraphy note</span>
+                    </div>
+                  </div>
+                  <span style="font-size: 0.75rem; font-weight: 600;">+₦8,500</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="summary-row">
+              <span id="summary-packaging-title">Selected Packaging</span>
+              <span id="summary-packaging-price" style="font-weight: 600;">Complimentary</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Estimated Delivery</span>
+              <span style="font-size: 0.8rem; color: var(--color-grey);">Calculated at Checkout</span>
+            </div>
+
+            <div class="summary-row total-row">
+              <span>Estimated Total</span>
+              <span id="summary-total" style="color: var(--color-black);">₦0</span>
+            </div>
+
+            <p style="font-size: 0.75rem; color: var(--color-grey); margin: 16px 0 24px; line-height: 1.5;">
+              Orders in Lagos are hand-dispatched with courier tracking or can be collected at our Victoria Island atelier.
+            </p>
+
+            <a href="checkout.html" class="btn btn-primary btn-block btn-lg">
+              Proceed to Checkout &rarr;
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer id="bint-footer"></footer>
+
+  <!-- Universal Scripts -->
+  <script src="js/bint-core.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

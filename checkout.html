@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | BINT &amp; BEADS</title>
+  <meta name="description" content="Complete your order for handcrafted beaded accessories, arrange white-glove doorstep delivery or atelier pickup in Lagos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/emblem.svg">
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages/checkout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside id="bint-announcement-bar"></aside>
+
+  <!-- Global Header -->
+  <header id="bint-header"></header>
+
+  <main id="main-content">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="breadcrumbs-separator">/</span>
+        <a href="cart.html">Bag</a>
+        <span class="breadcrumbs-separator">/</span>
+        <span class="breadcrumbs-current">Checkout</span>
+      </nav>
+
+      <div style="margin-bottom: 24px;">
+        <span class="text-meta" style="color: var(--color-gold);">STUDIO DISPATCH</span>
+        <h1 style="font-size: clamp(2rem, 3.5vw, 2.75rem); font-family: var(--font-serif); margin-top: 4px;">CHECKOUT</h1>
+      </div>
+
+      <!-- Checkout Step Progress Tabs -->
+      <div class="checkout-steps-nav">
+        <div class="checkout-step-tab active" data-checkout-step="1">
+          <span class="step-num-badge">1</span>
+          <span>Contact</span>
+        </div>
+        <div class="checkout-step-divider"></div>
+        <div class="checkout-step-tab" data-checkout-step="2">
+          <span class="step-num-badge">2</span>
+          <span>Delivery</span>
+        </div>
+        <div class="checkout-step-divider"></div>
+        <div class="checkout-step-tab" data-checkout-step="3">
+          <span class="step-num-badge">3</span>
+          <span>Packaging</span>
+        </div>
+        <div class="checkout-step-divider"></div>
+        <div class="checkout-step-tab" data-checkout-step="4">
+          <span class="step-num-badge">4</span>
+          <span>Review</span>
+        </div>
+      </div>
+
+      <div class="checkout-grid">
+        <!-- Left: Dynamic Steps Form -->
+        <div class="checkout-form-column">
+
+          <!-- STEP 1: Contact Details -->
+          <div class="checkout-pane" id="pane-contact">
+            <h2 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 8px;">Contact Information</h2>
+            <p style="font-size: 0.875rem; color: var(--color-grey-dark); margin-bottom: 24px;">We will send your handcrafted order verification code and dispatch updates here.</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label" for="checkout-first-name">First Name</label>
+                <input type="text" id="checkout-first-name" class="form-control" placeholder="Amina" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="checkout-last-name">Last Name</label>
+                <input type="text" id="checkout-last-name" class="form-control" placeholder="Bello" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="checkout-email">Email Address</label>
+              <input type="email" id="checkout-email" class="form-control" placeholder="amina@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="checkout-phone">Phone / WhatsApp Number</label>
+              <input type="tel" id="checkout-phone" class="form-control" placeholder="+234 803 123 4567" required>
+              <span class="form-hint">Our courier uses WhatsApp to share live dispatch location.</span>
+            </div>
+          </div>
+
+          <!-- STEP 2: Delivery Method -->
+          <div class="checkout-pane" id="pane-delivery" style="display: none;">
+            <h2 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 8px;">Delivery Method</h2>
+            <p style="font-size: 0.875rem; color: var(--color-grey-dark); margin-bottom: 24px;">Select how you wish to receive your handcrafted pieces.</p>
+
+            <div class="delivery-options-grid">
+              <!-- Method 1: Bint Delivery -->
+              <div class="delivery-card selected" data-delivery-method="bint_delivery">
+                <div>
+                  <h3 class="delivery-card-title">BINT DELIVERY</h3>
+                  <p class="delivery-card-desc">Let us handle doorstep delivery with insured studio couriers.</p>
+                </div>
+                <div class="delivery-card-price">From ₦3,500</div>
+              </div>
+
+              <!-- Method 2: Send My Rider -->
+              <div class="delivery-card" data-delivery-method="send_rider">
+                <div>
+                  <h3 class="delivery-card-title">SEND MY RIDER</h3>
+                  <p class="delivery-card-desc">I’ll arrange pickup with my rider once order verification is ready.</p>
+                </div>
+                <div class="delivery-card-price" style="color: var(--color-success);">FREE</div>
+              </div>
+
+              <!-- Method 3: Store Pickup -->
+              <div class="delivery-card" data-delivery-method="store_pickup">
+                <div>
+                  <h3 class="delivery-card-title">STORE PICKUP</h3>
+                  <p class="delivery-card-desc">I’ll collect my order from the Bint Victoria Island atelier.</p>
+                </div>
+                <div class="delivery-card-price" style="color: var(--color-success);">FREE</div>
+              </div>
+            </div>
+
+            <!-- Subfields: Bint Delivery Address -->
+            <div id="bint-delivery-fields" class="delivery-subfields-box" style="display: block;">
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 16px;">Delivery Destination</h4>
+              <div class="form-group">
+                <label class="form-label" for="delivery-area-select">Region / Shipping Zone</label>
+                <select id="delivery-area-select" class="form-select">
+                  <option value="lagos-island">Lagos Island (VI, Ikoyi, Lekki) — ₦3,500</option>
+                  <option value="lagos-mainland">Lagos Mainland (Ikeja, Yaba, Surulere) — ₦4,500</option>
+                  <option value="abuja">Abuja (FCT) — ₦6,500</option>
+                  <option value="port-harcourt">Port Harcourt — ₦6,500</option>
+                  <option value="interstate-other">Other Interstate Nationwide — ₦7,500</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="checkout-address">Street Address</label>
+                <input type="text" id="checkout-address" class="form-control" placeholder="e.g. Plot 14, Karimu Kotun Street" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="checkout-landmark">Closest Landmark (Optional)</label>
+                <input type="text" id="checkout-landmark" class="form-control" placeholder="e.g. Opposite Palms Mall">
+              </div>
+            </div>
+
+            <!-- Subfields: Send My Rider -->
+            <div id="rider-delivery-fields" class="delivery-subfields-box">
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 12px;">Rider Collection Guidelines</h4>
+              <p style="font-size: 0.875rem; color: var(--color-grey-dark); line-height: 1.7;">
+                Your dispatched rider will collect your order from:<br>
+                <strong>Bint &amp; Beads Atelier — 14 Karimu Kotun, Victoria Island, Lagos</strong><br>
+                <em>Important: The rider must present your unique order code generated upon checkout completion.</em>
+              </p>
+            </div>
+
+            <!-- Subfields: Store Pickup -->
+            <div id="pickup-delivery-fields" class="delivery-subfields-box">
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 16px;">Atelier Collection Schedule</h4>
+              <div class="form-group">
+                <label class="form-label" for="checkout-pickup-location">Atelier Location</label>
+                <select id="checkout-pickup-location" class="form-select">
+                  <option value="Studio Atelier — 14 Karimu Kotun, Victoria Island, Lagos">Studio Atelier — 14 Karimu Kotun, Victoria Island, Lagos</option>
+                  <option value="Pop-up Lounge — Lekki Phase 1, Lagos">Pop-up Lounge — Lekki Phase 1, Lagos</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="checkout-pickup-time">Preferred Time Window</label>
+                <select id="checkout-pickup-time" class="form-select">
+                  <option value="10:00 AM – 12:00 PM">10:00 AM – 12:00 PM</option>
+                  <option value="12:00 PM – 2:00 PM">12:00 PM – 2:00 PM</option>
+                  <option value="2:00 PM – 4:00 PM">2:00 PM – 4:00 PM</option>
+                  <option value="4:00 PM – 6:00 PM">4:00 PM – 6:00 PM</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Packaging -->
+          <div class="checkout-pane" id="pane-packaging" style="display: none;">
+            <h2 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 8px;">Select Presentation</h2>
+            <p style="font-size: 0.875rem; color: var(--color-grey-dark); margin-bottom: 24px;">Confirm how your pieces should be boxed.</p>
+
+            <div class="delivery-options-grid">
+              <div class="delivery-card selected" data-checkout-pkg="signature">
+                <div>
+                  <h3 class="delivery-card-title">Signature Velvet Pouch</h3>
+                  <p class="delivery-card-desc">Linen-lined black velvet with gold ribbon &bull; Complimentary</p>
+                </div>
+                <div class="delivery-card-price" style="color: var(--color-success);">FREE</div>
+              </div>
+
+              <div class="delivery-card" data-checkout-pkg="gift-box">
+                <div>
+                  <h3 class="delivery-card-title">Bint Keepsake Box</h3>
+                  <p class="delivery-card-desc">Hard-shell structured drawer box in rich onyx &amp; gold foil</p>
+                </div>
+                <div class="delivery-card-price">+₦4,500</div>
+              </div>
+
+              <div class="delivery-card" data-checkout-pkg="luxury-set">
+                <div>
+                  <h3 class="delivery-card-title">Bespoke Luxury Gift Suite</h3>
+                  <p class="delivery-card-desc">Presentation box, velvet roll &amp; wax-sealed calligraphy card</p>
+                </div>
+                <div class="delivery-card-price">+₦8,500</div>
+              </div>
+
+              <div class="delivery-card" data-checkout-pkg="minimal">
+                <div>
+                  <h3 class="delivery-card-title">Minimalist Studio Pack</h3>
+                  <p class="delivery-card-desc">Recyclable unbleached protective pouch</p>
+                </div>
+                <div class="delivery-card-price" style="color: var(--color-success);">FREE</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: Review -->
+          <div class="checkout-pane" id="pane-review" style="display: none;">
+            <h2 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 8px;">Order Review</h2>
+            <p style="font-size: 0.875rem; color: var(--color-grey-dark); margin-bottom: 24px;">Please review your commission details prior to placing your demo order.</p>
+
+            <div class="review-block">
+              <div class="review-block-header">
+                <span class="review-block-title">Contact Information</span>
+                <button type="button" class="btn-link" onclick="window.checkoutPage.currentStep = 1; window.checkoutPage.renderStep();">Edit</button>
+              </div>
+              <div id="review-contact-summary" style="font-size: 0.875rem; line-height: 1.7; color: var(--color-grey-dark);"></div>
+            </div>
+
+            <div class="review-block">
+              <div class="review-block-header">
+                <span class="review-block-title">Delivery Method</span>
+                <button type="button" class="btn-link" onclick="window.checkoutPage.currentStep = 2; window.checkoutPage.renderStep();">Edit</button>
+              </div>
+              <div id="review-delivery-summary" style="font-size: 0.875rem; line-height: 1.7; color: var(--color-grey-dark);"></div>
+            </div>
+
+            <div class="review-block">
+              <div class="review-block-header">
+                <span class="review-block-title">Packaging Selection</span>
+                <button type="button" class="btn-link" onclick="window.checkoutPage.currentStep = 3; window.checkoutPage.renderStep();">Edit</button>
+              </div>
+              <div id="review-packaging-summary" style="font-size: 0.875rem; line-height: 1.7; color: var(--color-grey-dark);"></div>
+            </div>
+
+            <div style="background: var(--color-cream); padding: 16px 20px; border-radius: var(--radius-sm); margin-top: 24px;">
+              <span class="text-meta" style="color: var(--color-deep-gold);">FRONTEND DEMO SIMULATION</span>
+              <p style="font-size: 0.8125rem; color: var(--color-grey-dark); margin-top: 4px;">
+                No payment or credit card details are collected. Clicking <strong>Place Demo Order</strong> generates your realistic order tracking reference in LocalStorage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div style="display: flex; gap: 12px; margin-top: 32px;">
+            <button type="button" class="btn btn-secondary" id="checkout-back-btn" style="visibility: hidden;">
+              &larr; Back
+            </button>
+            <button type="button" class="btn btn-primary btn-block btn-lg" id="checkout-continue-btn">
+              Continue to Next Step &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Sticky Order Summary -->
+        <aside aria-label="Checkout Summary">
+          <div class="order-summary-card">
+            <h3 class="summary-title" style="font-size: 1.35rem;">Bag Summary</h3>
+
+            <div id="checkout-items-list" style="margin-bottom: 20px; max-height: 280px; overflow-y: auto; padding-right: 6px;">
+              <!-- Rendered by checkout.js -->
+            </div>
+
+            <div class="summary-row">
+              <span>Items Subtotal</span>
+              <span id="checkout-subtotal" style="font-weight: 600;">₦0</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Packaging</span>
+              <span id="checkout-packaging-fee" style="font-weight: 600;">Complimentary</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Delivery</span>
+              <span id="checkout-delivery-fee" style="font-weight: 600;">₦3,500</span>
+            </div>
+
+            <div class="summary-row total-row">
+              <span>Grand Total</span>
+              <span id="checkout-total" style="color: var(--color-black); font-size: 1.3rem;">₦0</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer id="bint-footer"></footer>
+
+  <!-- Universal Scripts -->
+  <script src="js/bint-core.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

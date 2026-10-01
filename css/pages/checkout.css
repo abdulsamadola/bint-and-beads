@@ -1,0 +1,257 @@
+/* ==========================================================================
+   CHECKOUT, ORDER SUCCESS & TRACKING STYLING
+   ========================================================================== */
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  padding: 40px 0 96px;
+}
+
+@media (min-width: 992px) {
+  .checkout-grid {
+    grid-template-columns: 1.35fr 0.85fr;
+  }
+}
+
+/* Checkout Step Navigation */
+.checkout-steps-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.checkout-step-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-grey);
+}
+
+.checkout-step-tab.active {
+  color: var(--color-black);
+}
+
+.checkout-step-tab.completed {
+  color: var(--color-gold);
+}
+
+.step-num-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.checkout-step-tab.active .step-num-badge {
+  background: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+
+.checkout-step-divider {
+  width: 24px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Delivery Cards Grid */
+.delivery-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.delivery-card {
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.delivery-card:hover {
+  border-color: var(--color-black);
+}
+
+.delivery-card.selected {
+  border-color: var(--color-gold);
+  background: var(--color-cream);
+  box-shadow: 0 0 0 1px var(--color-gold);
+}
+
+.delivery-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.delivery-card-desc {
+  font-size: 0.8125rem;
+  color: var(--color-grey-dark);
+}
+
+.delivery-card-price {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-black);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Dynamic Delivery Sub-Fields Box */
+.delivery-subfields-box {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  margin-top: 16px;
+  display: none;
+}
+
+/* Review Step Info Summary */
+.review-block {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.review-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.review-block-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-black);
+}
+
+.review-item-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+}
+
+/* Order Success & Tracking Timeline */
+.timeline-stepper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 48px 0;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.timeline-stepper::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 1;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  min-width: 80px;
+}
+
+.timeline-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--color-grey);
+  margin-bottom: 10px;
+  transition: all var(--transition-fast);
+}
+
+.timeline-step.completed .timeline-dot {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.timeline-step.current .timeline-dot {
+  background: var(--color-black);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  box-shadow: 0 0 0 4px var(--color-gold-dim);
+}
+
+.timeline-label {
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--color-grey);
+}
+
+.timeline-step.completed .timeline-label,
+.timeline-step.current .timeline-label {
+  color: var(--color-black);
+}
+
+/* Demo Reference Chips */
+.sample-order-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.sample-chip-btn {
+  padding: 8px 14px;
+  background: var(--color-cream);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-black);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sample-chip-btn:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}

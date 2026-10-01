@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bint Custom Studio | Luxury Beaded Accessories Configurator</title>
+  <meta name="description" content="Design your personalized beaded bracelet, waist beads, baroque choker or sculpted bag in the Bint Custom Studio. Handcrafted in Lagos, Nigeria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/emblem.svg">
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages/customize.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside id="bint-announcement-bar"></aside>
+
+  <!-- Global Header -->
+  <header id="bint-header"></header>
+
+  <main id="main-content">
+    <!-- Studio Hero -->
+    <section class="custom-studio-hero">
+      <div class="container">
+        <span class="text-meta" style="color: var(--color-gold);">ARTISAN PRODUCT CONFIGURATOR</span>
+        <h1>THE BINT CUSTOM STUDIO</h1>
+        <p>Designed by you. Handcrafted by Bint &amp; Beads. Compose a distinctive piece tailored to your personal aesthetic, palette, and memorable moments.</p>
+      </div>
+    </section>
+
+    <!-- Sticky Progress Tracker -->
+    <div class="studio-progress-wrapper" id="studio-progress-bar">
+      <div class="container studio-progress-container">
+        <!-- Left: Step Info -->
+        <div class="studio-progress-step-info">
+          <span class="studio-step-badge" id="studio-step-num">Step 01 of 07</span>
+          <span class="studio-step-title-text" id="studio-step-title-text">Accessory Silhouette</span>
+        </div>
+
+        <!-- Center: Interactive Step Navigation Tabs -->
+        <nav class="studio-step-tabs-nav" id="studio-step-tabs" aria-label="Custom studio step navigation">
+          <button type="button" class="step-tab-btn active" data-step-tab="1" title="Step 1: Silhouette">
+            <span class="step-tab-num">1</span>
+            <span class="step-tab-label">Silhouette</span>
+          </button>
+          <button type="button" class="step-tab-btn" data-step-tab="2" title="Step 2: Recipient">
+            <span class="step-tab-num">2</span>
+            <span class="step-tab-label">Recipient</span>
+          </button>
+          <button type="button" class="step-tab-btn" data-step-tab="3" title="Step 3: Direction">
+            <span class="step-tab-num">3</span>
+            <span class="step-tab-label">Direction</span>
+          </button>
+          <button type="button" class="step-tab-btn" data-step-tab="4" title="Step 4: Palette">
+            <span class="step-tab-num">4</span>
+            <span class="step-tab-label">Palette</span>
+          </button>
+          <button type="button" class="step-tab-btn" data-step-tab="5" title="Step 5: Inscription">
+            <span class="step-tab-num">5</span>
+            <span class="step-tab-label">Inscription</span>
+          </button>
+          <button type="button" class="step-tab-btn" data-step-tab="6" title="Step 6: Sizing">
+            <span class="step-tab-num">6</span>
+            <span class="step-tab-label">Sizing</span>
+          </button>
+          <button type="button" class="step-tab-btn" data-step-tab="7" title="Step 7: Presentation">
+            <span class="step-tab-num">7</span>
+            <span class="step-tab-label">Presentation</span>
+          </button>
+        </nav>
+
+        <!-- Right: Actions -->
+        <div class="studio-progress-actions">
+          <button type="button" class="btn btn-secondary btn-sm" id="studio-prev-btn-top" style="visibility: hidden;">&larr; Back</button>
+          <button type="button" class="btn btn-primary btn-sm" id="studio-next-btn-top">Continue &rarr;</button>
+          <button type="button" class="studio-bespoke-btn" id="open-bespoke-modal-btn">Bespoke Inquiry</button>
+        </div>
+      </div>
+
+      <!-- Slim Gold Progress Fill Line -->
+      <div class="studio-progress-line-track">
+        <div class="studio-progress-line-fill" id="studio-progress-fill" style="width: 14.28%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="studio-main-layout">
+        <!-- Left: Steps Container -->
+        <div class="studio-steps-container">
+
+          <!-- STEP 1: Accessory Silhouette -->
+          <div class="studio-step-pane active" id="step-pane-1">
+            <div class="step-question-header">
+              <span class="text-meta" style="color: var(--color-gold);">STEP 01</span>
+              <h2>What shall we create?</h2>
+              <p>Select the foundation silhouette for your custom piece.</p>
+            </div>
+
+            <div class="option-cards-grid option-cards-grid-4">
+              <div class="studio-option-card selected" data-accessory-val="bracelet">
+                <div class="option-card-media">
+                  <img src="https://images.unsplash.com/photo-1611591475103-4fa1b7765a7f?auto=format&fit=crop&w=400&q=80" alt="Beaded Bracelet">
+                </div>
+                <div class="option-card-title">Bracelet</div>
+                <div class="option-card-desc">From ₦32,000</div>
+              </div>
+
+              <div class="studio-option-card" data-accessory-val="necklace">
+                <div class="option-card-media">
+                  <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=400&q=80" alt="Necklace and Chokers">
+                </div>
+                <div class="option-card-title">Necklace</div>
+                <div class="option-card-desc">From ₦48,000</div>
+              </div>
+
+              <div class="studio-option-card" data-accessory-val="waist-beads">
+                <div class="option-card-media">
+                  <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=400&q=80" alt="Waist Beads">
+                </div>
+                <div class="option-card-title">Waist Beads</div>
+                <div class="option-card-desc">From ₦28,000</div>
+              </div>
+
+              <div class="studio-option-card" data-accessory-val="anklet">
+                <div class="option-card-media">
+                  <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?auto=format&fit=crop&w=400&q=80" alt="Anklet">
+                </div>
+                <div class="option-card-title">Anklet</div>
+                <div class="option-card-desc">From ₦26,000</div>
+              </div>
+
+              <div class="studio-option-card" data-accessory-val="beaded-bag">
+                <div class="option-card-media">
+                  <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=400&q=80" alt="Beaded Bag">
+                </div>
+                <div class="option-card-title">Beaded Bag</div>
+                <div class="option-card-desc">From ₦85,000</div>
+              </div>
+
+              <div class="studio-option-card" data-accessory-val="phone-charm">
+                <div class="option-card-media">
+                  <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=400&q=80" alt="Phone Charm">
+                </div>
+                <div class="option-card-title">Phone Charm</div>
+                <div class="option-card-desc">From ₦16,000</div>
+              </div>
+
+              <div class="studio-option-card" data-accessory-val="keychain">
+                <div class="option-card-media">
+                  <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80" alt="Keychain">
+                </div>
+                <div class="option-card-title">Keychain</div>
+                <div class="option-card-desc">From ₦14,000</div>
+              </div>
+
+              <div class="studio-option-card" data-accessory-val="gift-set">
+                <div class="option-card-media">
+                  <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=400&q=80" alt="Gift Set">
+                </div>
+                <div class="option-card-title">Gift Set</div>
+                <div class="option-card-desc">From ₦78,000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: Recipient -->
+          <div class="studio-step-pane" id="step-pane-2">
+            <div class="step-question-header">
+              <span class="text-meta" style="color: var(--color-gold);">STEP 02</span>
+              <h2>Who is it for?</h2>
+              <p>Helps our artisans tailor proportion, packaging subtleties, and notes.</p>
+            </div>
+
+            <div class="recipient-options-grid">
+              <div class="recipient-card selected" data-recipient-val="myself">
+                <strong>Myself</strong>
+                <div style="font-size: 0.725rem; color: var(--color-grey); margin-top: 4px;">Personal daily talisman</div>
+              </div>
+              <div class="recipient-card" data-recipient-val="her">
+                <strong>For Her</strong>
+                <div style="font-size: 0.725rem; color: var(--color-grey); margin-top: 4px;">A cherished partner or mother</div>
+              </div>
+              <div class="recipient-card" data-recipient-val="him">
+                <strong>For Him</strong>
+                <div style="font-size: 0.725rem; color: var(--color-grey); margin-top: 4px;">Tactile onyx &amp; obsidian</div>
+              </div>
+              <div class="recipient-card" data-recipient-val="couple">
+                <strong>Couple / Duo</strong>
+                <div style="font-size: 0.725rem; color: var(--color-grey); margin-top: 4px;">Intertwined matching pieces</div>
+              </div>
+              <div class="recipient-card" data-recipient-val="bridal-party">
+                <strong>Bridal Party</strong>
+                <div style="font-size: 0.725rem; color: var(--color-grey); margin-top: 4px;">Bridesmaids &amp; celebration</div>
+              </div>
+              <div class="recipient-card" data-recipient-val="child">
+                <strong>Child / Petite</strong>
+                <div style="font-size: 0.725rem; color: var(--color-grey); margin-top: 4px;">Delicate featherlight scale</div>
+              </div>
+              <div class="recipient-card" data-recipient-val="gift">
+                <strong>Gift Milestone</strong>
+                <div style="font-size: 0.725rem; color: var(--color-grey); margin-top: 4px;">Birthdays &amp; anniversaries</div>
+              </div>
+              <div class="recipient-card" data-recipient-val="corporate">
+                <strong>Event / Corporate</strong>
+                <div style="font-size: 0.725rem; color: var(--color-grey); margin-top: 4px;">VIP keepsake gifting</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Style Direction -->
+          <div class="studio-step-pane" id="step-pane-3">
+            <div class="step-question-header">
+              <span class="text-meta" style="color: var(--color-gold);">STEP 03</span>
+              <h2>Choose your direction</h2>
+              <p>Select an architectural vibe to establish texture and bead rhythm.</p>
+            </div>
+
+            <div class="option-cards-grid option-cards-grid-4">
+              <div class="studio-option-card" data-style-val="minimal">
+                <div class="option-card-title">Minimal</div>
+                <div class="option-card-desc">Quiet micro-beads &amp; discrete lines</div>
+              </div>
+              <div class="studio-option-card" data-style-val="classic">
+                <div class="option-card-title">Classic</div>
+                <div class="option-card-desc">Balanced symmetry &amp; timeless accents</div>
+              </div>
+              <div class="studio-option-card" data-style-val="statement">
+                <div class="option-card-title">Statement</div>
+                <div class="option-card-desc">Bold faceted crystals &amp; heavy spacers</div>
+              </div>
+              <div class="studio-option-card" data-style-val="traditional">
+                <div class="option-card-title">Traditional</div>
+                <div class="option-card-desc">Heritage tie-on glass &amp; organic amber</div>
+              </div>
+              <div class="studio-option-card selected" data-style-val="contemporary">
+                <div class="option-card-title">Contemporary</div>
+                <div class="option-card-desc">Architectural noir &amp; warm gold foil</div>
+              </div>
+              <div class="studio-option-card" data-style-val="crystal">
+                <div class="option-card-title">Crystal Lustre</div>
+                <div class="option-card-desc">Faceted Austrian prisms &amp; refraction</div>
+              </div>
+              <div class="studio-option-card" data-style-val="pearl">
+                <div class="option-card-title">Baroque Pearl</div>
+                <div class="option-card-desc">Organic natural freshwater contours</div>
+              </div>
+              <div class="studio-option-card" data-style-val="mixed-bead">
+                <div class="option-card-title">Mixed Texture</div>
+                <div class="option-card-desc">Lava stone, pearl, and metallic glass</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: Colours -->
+          <div class="studio-step-pane" id="step-pane-4">
+            <div class="step-question-header">
+              <span class="text-meta" style="color: var(--color-gold);">STEP 04</span>
+              <h2>Curate your palette</h2>
+              <p>Choose up to three harmonious tones. You can also preview a photo of your outfit!</p>
+            </div>
+
+            <div class="studio-color-group">
+              <div class="studio-color-title">01 &bull; Primary Base Tone</div>
+              <div class="studio-color-swatches">
+                <button type="button" class="studio-color-dot selected" data-color-group="primary" data-color-val="Black" style="background:#111;" title="Black"></button>
+                <button type="button" class="studio-color-dot" data-color-group="primary" data-color-val="Gold" style="background:#C6A15B;" title="Gold"></button>
+                <button type="button" class="studio-color-dot" data-color-group="primary" data-color-val="White" style="background:#FFFFFF;" title="White"></button>
+                <button type="button" class="studio-color-dot" data-color-group="primary" data-color-val="Cream" style="background:#F5EFEB;" title="Cream"></button>
+                <button type="button" class="studio-color-dot" data-color-group="primary" data-color-val="Emerald" style="background:#1E5838;" title="Emerald"></button>
+                <button type="button" class="studio-color-dot" data-color-group="primary" data-color-val="Royal Blue" style="background:#1E3A8A;" title="Royal Blue"></button>
+                <button type="button" class="studio-color-dot" data-color-group="primary" data-color-val="Burgundy" style="background:#6B1D2F;" title="Burgundy"></button>
+                <button type="button" class="studio-color-dot" data-color-group="primary" data-color-val="Brown" style="background:#784D2B;" title="Brown"></button>
+              </div>
+            </div>
+
+            <div class="studio-color-group">
+              <div class="studio-color-title">02 &bull; Secondary Complement</div>
+              <div class="studio-color-swatches">
+                <button type="button" class="studio-color-dot" data-color-group="secondary" data-color-val="Black" style="background:#111;" title="Black"></button>
+                <button type="button" class="studio-color-dot selected" data-color-group="secondary" data-color-val="Gold" style="background:#C6A15B;" title="Gold"></button>
+                <button type="button" class="studio-color-dot" data-color-group="secondary" data-color-val="Silver" style="background:#D4D4D8;" title="Silver"></button>
+                <button type="button" class="studio-color-dot" data-color-group="secondary" data-color-val="White" style="background:#FFFFFF;" title="White"></button>
+                <button type="button" class="studio-color-dot" data-color-group="secondary" data-color-val="Cream" style="background:#F5EFEB;" title="Cream"></button>
+                <button type="button" class="studio-color-dot" data-color-group="secondary" data-color-val="Pink" style="background:#E8B4B8;" title="Pink"></button>
+              </div>
+            </div>
+
+            <div class="studio-color-group">
+              <div class="studio-color-title">03 &bull; Accent Detail</div>
+              <div class="studio-color-swatches">
+                <button type="button" class="studio-color-dot" data-color-group="accent" data-color-val="Gold" style="background:#C6A15B;" title="Gold"></button>
+                <button type="button" class="studio-color-dot" data-color-group="accent" data-color-val="Silver" style="background:#D4D4D8;" title="Silver"></button>
+                <button type="button" class="studio-color-dot selected" data-color-group="accent" data-color-val="Cream" style="background:#F5EFEB;" title="Cream"></button>
+                <button type="button" class="studio-color-dot" data-color-group="accent" data-color-val="Emerald" style="background:#1E5838;" title="Emerald"></button>
+              </div>
+            </div>
+
+            <!-- Match My Outfit Feature -->
+            <div class="outfit-match-box" id="outfit-upload-box">
+              <input type="file" id="outfit-upload-input" accept="image/*" style="display:none;" aria-label="Upload outfit preview">
+              <div style="font-size: 1.5rem; color: var(--color-gold); margin-bottom: 6px;">&#128247;</div>
+              <strong style="font-size: 0.9rem;">Match My Outfit (Photo Preview)</strong>
+              <p style="font-size: 0.775rem; color: var(--color-grey); margin-top: 4px;">Click to select an outfit or fabric swatch from your phone or device. Preview stays strictly on your device.</p>
+              <img id="outfit-preview-img" class="outfit-preview-img" alt="Uploaded outfit preview">
+            </div>
+          </div>
+
+          <!-- STEP 5: Personalization -->
+          <div class="studio-step-pane" id="step-pane-5">
+            <div class="step-question-header">
+              <span class="text-meta" style="color: var(--color-gold);">STEP 05</span>
+              <h2>Make It Yours</h2>
+              <p>Inscribe a name, initials, or meaningful word. Leave blank if you prefer an unengraved piece.</p>
+            </div>
+
+            <div class="personalization-input-wrap">
+              <label class="form-label" for="custom-name-input">Name or Meaningful Word (Optional)</label>
+              <input type="text" id="custom-name-input" class="personalization-text-input" placeholder="e.g. AMINA" maxlength="12">
+              <div class="char-counter-text" id="custom-name-counter">0 / 12 characters</div>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <span class="form-label">Lettering Finish</span>
+              <div class="finish-options-row">
+                <button type="button" class="finish-select-btn selected" data-finish-val="gold">Gilded Gold (+₦3,000)</button>
+                <button type="button" class="finish-select-btn" data-finish-val="silver">Polished Silver (+₦2,500)</button>
+                <button type="button" class="finish-select-btn" data-finish-val="black">Matte Obsidian (+₦2,000)</button>
+                <button type="button" class="finish-select-btn" data-finish-val="white">Enamel White (+₦1,500)</button>
+              </div>
+            </div>
+
+            <div>
+              <span class="form-label">Optional Artisan Charm</span>
+              <div class="charms-grid">
+                <div class="charm-card selected" data-charm-val="none">
+                  <div class="charm-icon">&oslash;</div>
+                  <div class="charm-name">None</div>
+                </div>
+                <div class="charm-card" data-charm-val="heart">
+                  <div class="charm-icon">&hearts;</div>
+                  <div class="charm-name">Heart (+₦3.5k)</div>
+                </div>
+                <div class="charm-card" data-charm-val="crown">
+                  <div class="charm-icon">&#9819;</div>
+                  <div class="charm-name">Crown (+₦4k)</div>
+                </div>
+                <div class="charm-card" data-charm-val="star">
+                  <div class="charm-icon">&#9733;</div>
+                  <div class="charm-name">Star (+₦3.5k)</div>
+                </div>
+                <div class="charm-card" data-charm-val="butterfly">
+                  <div class="charm-icon">&#10048;</div>
+                  <div class="charm-name">Butterfly (+₦4.5k)</div>
+                </div>
+                <div class="charm-card" data-charm-val="initial">
+                  <div class="charm-icon">&bull;</div>
+                  <div class="charm-name">Coin (+₦3k)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 6: Size -->
+          <div class="studio-step-pane" id="step-pane-6">
+            <div class="step-question-header">
+              <span class="text-meta" style="color: var(--color-gold);">STEP 06</span>
+              <h2>Select your fit</h2>
+              <p>Ensuring your bespoke piece rests comfortably and securely.</p>
+            </div>
+
+            <div class="size-options-row" id="custom-sizes-container" style="margin-bottom: 24px;">
+              <!-- Dynamic sizes injected by customize.js based on accessory type -->
+            </div>
+
+            <div class="accordion" style="margin-top: 32px;">
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button type="button" class="accordion-trigger">
+                    <span>How to Measure Your Wrist or Waist</span>
+                    <span class="accordion-icon"></span>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <p><strong>For Wrist:</strong> Wrap a soft measuring tape or a string around your wrist bone snugly without slack. Mark where it meets, then measure against a flat ruler. If between measurements, we recommend sizing up by 0.5cm for comfort.</p>
+                  <p style="margin-top: 8px;"><strong>For Waist Beads:</strong> Decide whether you prefer your beads high at your natural waist, below your belly button, or relaxed on your hips. Measure directly against bare skin.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 7: Packaging & Gifting Presentation -->
+          <div class="studio-step-pane" id="step-pane-7">
+            <div class="step-question-header">
+              <span class="text-meta" style="color: var(--color-gold);">STEP 07</span>
+              <h2>Choose Your Presentation</h2>
+              <p>How would you like your personalized creation boxed and sealed?</p>
+            </div>
+
+            <div class="option-cards-grid" style="grid-template-columns: 1fr;">
+              <div class="studio-option-card selected" data-packaging-val="signature" style="flex-direction: row; justify-content: space-between; text-align: left; padding: 20px;">
+                <div>
+                  <div class="option-card-title">Signature Velvet Pouch</div>
+                  <div class="option-card-desc">Linen-lined black velvet pouch with gold foil ribbon &bull; Complimentary</div>
+                </div>
+                <span style="font-weight: 700; color: var(--color-success);">FREE</span>
+              </div>
+
+              <div class="studio-option-card" data-packaging-val="gift-box" style="flex-direction: row; justify-content: space-between; text-align: left; padding: 20px;">
+                <div>
+                  <div class="option-card-title">Bint Keepsake Box</div>
+                  <div class="option-card-desc">Hard-shell structured drawer box in rich onyx with satin pull tab</div>
+                </div>
+                <span style="font-weight: 700; color: var(--color-black);">+₦4,500</span>
+              </div>
+
+              <div class="studio-option-card" data-packaging-val="luxury-set" style="flex-direction: row; justify-content: space-between; text-align: left; padding: 20px;">
+                <div>
+                  <div class="option-card-title">Bespoke Luxury Gift Suite</div>
+                  <div class="option-card-desc">Presentation box, suede roll &amp; hand wax-sealed calligraphy card</div>
+                </div>
+                <span style="font-weight: 700; color: var(--color-black);">+₦8,500</span>
+              </div>
+
+              <div class="studio-option-card" data-packaging-val="minimal" style="flex-direction: row; justify-content: space-between; text-align: left; padding: 20px;">
+                <div>
+                  <div class="option-card-title">Minimalist Studio Pack</div>
+                  <div class="option-card-desc">Zero-plastic, 100% recyclable unbleached paper pouch</div>
+                </div>
+                <span style="font-weight: 700; color: var(--color-success);">FREE</span>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 32px;">
+              <label class="form-label" for="custom-gift-message">Handwritten Artisan Gift Note (Optional)</label>
+              <textarea id="custom-gift-message" class="form-textarea" placeholder="Write a note to be inscribed with wax seal on heavy stock ivory paper..." maxlength="150"></textarea>
+              <div class="char-counter-text" id="gift-msg-counter">0 / 150 characters</div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons (Back & Continue) -->
+          <div class="studio-step-actions">
+            <button type="button" class="btn btn-secondary" id="studio-prev-btn">&larr; Back</button>
+            <button type="button" class="btn btn-primary" id="studio-next-btn">Continue to Next Step &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Right: Sticky Live Creation Summary -->
+        <aside class="studio-summary-sticky" aria-label="Creation Summary">
+          <div class="studio-summary-card">
+            <span class="text-meta" style="color: var(--color-gold);">LIVE STUDIO PREVIEW</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin: 4px 0 16px;">YOUR CREATION</h3>
+
+            <!-- Visual Simulated Box -->
+            <div class="creation-visual-preview">
+              <div class="creation-preview-lettering" id="preview-lettering">BINT &amp; BEADS</div>
+              <div class="creation-preview-charm" id="preview-charm"></div>
+              <div class="creation-preview-swatches" id="preview-swatches"></div>
+            </div>
+
+            <div class="creation-summary-list">
+              <div class="creation-summary-item">
+                <span>Accessory:</span>
+                <strong id="summary-accessory">Bracelet</strong>
+              </div>
+              <div class="creation-summary-item">
+                <span>Style:</span>
+                <strong id="summary-style">Contemporary</strong>
+              </div>
+              <div class="creation-summary-item">
+                <span>Palette:</span>
+                <strong id="summary-colors">Black, Gold</strong>
+              </div>
+              <div class="creation-summary-item">
+                <span>Inscription:</span>
+                <strong id="summary-name">None</strong>
+              </div>
+              <div class="creation-summary-item">
+                <span>Finish:</span>
+                <strong id="summary-finish">Gold</strong>
+              </div>
+              <div class="creation-summary-item">
+                <span>Charm:</span>
+                <strong id="summary-charm">None</strong>
+              </div>
+              <div class="creation-summary-item">
+                <span>Selected Size:</span>
+                <strong id="summary-size">M (17.5cm)</strong>
+              </div>
+              <div class="creation-summary-item">
+                <span>Presentation:</span>
+                <strong id="summary-packaging">Signature Velvet Pouch</strong>
+              </div>
+            </div>
+
+            <div class="studio-price-row">
+              <span style="font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-grey-dark); font-weight: 600;">Estimated Price</span>
+              <span class="studio-price-val" id="studio-price-display">₦38,500</span>
+            </div>
+
+            <p style="font-size: 0.725rem; color: var(--color-grey); margin-top: 12px; line-height: 1.5;">
+              Price adjusts dynamically based on chosen materials, gold leaf lettering and presentation box.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bespoke Request Modal -->
+  <div class="modal-backdrop" id="bespoke-modal-backdrop" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true" aria-label="Start Bespoke Request">
+      <button type="button" class="modal-close-btn" id="bespoke-modal-close" aria-label="Close modal">&times;</button>
+      
+      <div id="bespoke-form-wrap">
+        <span class="text-meta" style="color: var(--color-gold);">ONE-OF-A-KIND CREATIONS</span>
+        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin: 4px 0 10px;">START A BESPOKE REQUEST</h2>
+        <p style="font-size: 0.875rem; color: var(--color-grey-dark); margin-bottom: 24px;">Have a special bridal suite, corporate milestone, or vintage heirloom recreation in mind? Our head artisan will review your brief within 24 hours.</p>
+
+        <form id="bespoke-inquiry-form">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Amina Bello" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">WhatsApp / Phone</label>
+              <input type="tel" class="form-control" placeholder="+234 800 000 0000" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="amina@example.com" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">Occasion / Milestone</label>
+              <input type="text" class="form-control" placeholder="e.g. Traditional Wedding, 30th Birthday">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Budget Estimate</label>
+              <select class="form-select">
+                <option value="50k-100k">₦50,000 – ₦100,000</option>
+                <option value="100k-250k">₦100,000 – ₦250,000</option>
+                <option value="250k+">₦250,000+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Your Vision &amp; Notes</label>
+            <textarea class="form-textarea" placeholder="Describe the materials, colours, or aesthetic you envision..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Bespoke Inquiry &rarr;</button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div id="bespoke-success-box" style="display: none; text-align: center; padding: 20px 0;">
+        <div style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 12px;">&#10024;</div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 8px;">Inquiry Officially Received</h3>
+        <p style="font-size: 0.9rem; color: var(--color-grey-dark); margin-bottom: 16px;">Our bespoke studio concierge has recorded your commission brief.</p>
+        <div style="background: var(--color-cream); padding: 12px 20px; border-radius: 4px; display: inline-block; font-family: monospace; font-size: 1.1rem; font-weight: 700; color: var(--color-black); margin-bottom: 24px;" id="bespoke-ref-code">
+          BB-CUS-1048
+        </div>
+        <br>
+        <a href="https://wa.me/2348000002468" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Chat with Concierge on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer id="bint-footer"></footer>
+
+  <!-- Universal Scripts (Supports HTTP & Local file:// protocols) -->
+  <script src="js/bint-core.js"></script>
+  <script src="js/customize.js"></script>
+</body>
+</html>

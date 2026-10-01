@@ -1,0 +1,748 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-black);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-rich-black);
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  border: 1px solid var(--color-gold);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-deep-gold);
+  border-color: var(--color-deep-gold);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transform: translateY(-1px);
+}
+
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-white);
+}
+
+.btn-white:hover {
+  background-color: var(--color-cream);
+  color: var(--color-black);
+}
+
+.btn-link {
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-black);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.btn-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-black);
+  transition: transform var(--transition-fast);
+  transform-origin: right;
+  transform: scaleX(1);
+}
+
+.btn-link:hover::after {
+  transform-origin: left;
+  background-color: var(--color-gold);
+}
+
+.btn-link:hover {
+  color: var(--color-gold);
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 0.75rem;
+}
+
+.btn-lg {
+  padding: 18px 40px;
+  font-size: 0.875rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   BADGES & STATUS LABELS
+   ========================================================================== */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+}
+
+.badge-new {
+  background: var(--color-rich-black);
+  color: var(--color-ivory);
+}
+
+.badge-bestseller {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.badge-oneofone {
+  background: var(--color-black);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+}
+
+.badge-ready {
+  background: var(--color-sand);
+  color: var(--color-grey-dark);
+}
+
+.badge-custom {
+  background: var(--color-cream);
+  color: var(--color-deep-gold);
+  border: 1px solid var(--color-gold);
+}
+
+/* ==========================================================================
+   PRODUCT CARDS
+   ========================================================================== */
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  transition: transform var(--transition-smooth);
+}
+
+.product-card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-cream);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-sm);
+}
+
+.product-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.product-card-image.secondary-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.product-card:hover .product-card-image.primary-img {
+  transform: scale(1.04);
+}
+
+.product-card:hover .product-card-image.secondary-img {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.product-card-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.product-card-wishlist {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: var(--color-black);
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.product-card-wishlist:hover {
+  background: var(--color-white);
+  transform: scale(1.1);
+  color: var(--color-error);
+}
+
+.product-card-wishlist.active {
+  color: var(--color-error);
+}
+
+.product-card-quick-add {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(8, 8, 8, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--color-white);
+  padding: 12px 16px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform var(--transition-smooth), opacity var(--transition-smooth), background var(--transition-fast);
+  z-index: 3;
+}
+
+.product-card:hover .product-card-quick-add {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.product-card-quick-add:hover {
+  background: var(--color-black);
+  color: var(--color-gold);
+}
+
+.product-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-card-category {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-grey);
+}
+
+.product-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-black);
+  transition: color var(--transition-fast);
+}
+
+.product-card-title a:hover {
+  color: var(--color-gold);
+}
+
+.product-card-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.price-current {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-black);
+}
+
+.price-old {
+  font-size: 0.85rem;
+  color: var(--color-grey);
+  text-decoration: line-through;
+}
+
+.product-card-swatches {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.swatch-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.swatch-dot:hover {
+  transform: scale(1.25);
+}
+
+/* ==========================================================================
+   RATINGS & REVIEWS
+   ========================================================================== */
+.rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--color-gold);
+  font-size: 0.85rem;
+}
+
+.rating-stars .star-empty {
+  color: var(--color-sand);
+}
+
+.rating-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--color-grey-dark);
+}
+
+/* ==========================================================================
+   FORM CONTROLS
+   ========================================================================== */
+.form-group {
+  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--color-grey-dark);
+}
+
+.form-control,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--color-black);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-dim);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-hint {
+  font-size: 0.75rem;
+  color: var(--color-grey);
+}
+
+.form-error {
+  font-size: 0.75rem;
+  color: var(--color-error);
+  display: none;
+}
+
+.form-group.has-error .form-control {
+  border-color: var(--color-error);
+}
+
+.form-group.has-error .form-error {
+  display: block;
+}
+
+/* ==========================================================================
+   QUANTITY SELECTOR
+   ========================================================================== */
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  height: 48px;
+}
+
+.qty-btn {
+  width: 44px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  font-size: 1.1rem;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.qty-btn:hover {
+  background: var(--color-cream);
+  color: var(--color-black);
+}
+
+.qty-input {
+  width: 48px;
+  height: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ==========================================================================
+   ACCORDIONS
+   ========================================================================== */
+.accordion {
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-header {
+  width: 100%;
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-black);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.accordion-trigger:hover {
+  color: var(--color-gold);
+}
+
+.accordion-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+  content: '';
+  position: absolute;
+  background-color: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.accordion-icon::before {
+  top: 9px;
+  left: 2px;
+  width: 16px;
+  height: 1.5px;
+}
+
+.accordion-icon::after {
+  top: 2px;
+  left: 9px;
+  width: 1.5px;
+  height: 16px;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-smooth), padding var(--transition-smooth);
+}
+
+.accordion-item.active .accordion-content {
+  padding-bottom: 20px;
+}
+
+.accordion-content p {
+  color: var(--color-grey-dark);
+  font-size: 0.925rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATIONS
+   ========================================================================== */
+.toast-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  min-width: 280px;
+  max-width: 380px;
+  background: var(--color-rich-black);
+  color: var(--color-white);
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-dark);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-left: 3px solid var(--color-gold);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   MODAL
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(8, 8, 8, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background: var(--color-ivory);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-dark);
+  padding: 36px clamp(20px, 4vw, 40px);
+  position: relative;
+  transform: translateY(20px);
+  transition: transform var(--transition-smooth);
+}
+
+.modal-backdrop.active .modal-container {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-grey);
+  border-radius: 50%;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  color: var(--color-black);
+  background: var(--color-cream);
+}
+
+/* ==========================================================================
+   EMPTY STATES
+   ========================================================================== */
+.empty-state {
+  text-align: center;
+  padding: clamp(48px, 8vw, 80px) 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.empty-state-icon {
+  font-size: 2.5rem;
+  color: var(--color-sand);
+  margin-bottom: var(--space-md);
+}
+
+.empty-state-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-black);
+}
+
+.empty-state-desc {
+  color: var(--color-grey-dark);
+  margin-bottom: var(--space-lg);
+}
+
+/* ==========================================================================
+   BREADCRUMBS
+   ========================================================================== */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-grey);
+  padding: 20px 0;
+}
+
+.breadcrumbs a {
+  color: var(--color-grey);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-black);
+}
+
+.breadcrumbs-separator {
+  color: var(--color-border);
+}
+
+.breadcrumbs-current {
+  color: var(--color-black);
+  font-weight: 600;
+}

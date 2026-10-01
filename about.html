@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story &amp; Craftsmanship | BINT &amp; BEADS</title>
+  <meta name="description" content="Discover the craftsmanship, philosophy, and artisan intention behind Bint & Beads handcrafted contemporary beaded accessories.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/emblem.svg">
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .about-hero {
+      position: relative;
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: clamp(80px, 12vw, 140px) 0 clamp(60px, 8vw, 100px);
+      text-align: center;
+      overflow: hidden;
+    }
+    .about-hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      filter: grayscale(40%);
+    }
+    .about-split-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+      margin-bottom: clamp(60px, 8vw, 120px);
+    }
+    @media (min-width: 900px) {
+      .about-split-row {
+        grid-template-columns: 1fr 1fr;
+      }
+      .about-split-row.reverse .about-img-box {
+        order: 2;
+      }
+    }
+    .about-img-box {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-dark);
+      background-color: var(--color-rich-black);
+    }
+    .about-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-quote-box {
+      background: var(--color-cream);
+      border-left: 3px solid var(--color-gold);
+      padding: 32px;
+      margin: 32px 0;
+      border-radius: var(--radius-sm);
+    }
+    .about-quote-text {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--color-black);
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    @media (min-width: 768px) {
+      .pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .pillar-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      padding: 36px 28px;
+      border-radius: var(--radius-sm);
+    }
+    .pillar-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: var(--color-black);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside id="bint-announcement-bar"></aside>
+
+  <!-- Global Header -->
+  <header id="bint-header"></header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="about-hero">
+      <img class="about-hero-bg" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=2000&q=80" alt="Hands threading beads in studio">
+      <div class="container" style="position: relative; z-index: 2;">
+        <span class="text-meta" style="color: var(--color-gold);">HERITAGE &amp; VISION</span>
+        <h1 style="font-size: clamp(2.8rem, 6vw, 4.5rem); font-family: var(--font-serif); margin-top: 8px;">CRAFTED BY INTENTION</h1>
+        <p style="color: var(--color-sand); max-width: 620px; margin: 16px auto 0; font-size: 1.1rem; line-height: 1.8;">
+          We believe accessories should carry weight — not only in their physical presence against skin, but in the story they quietly convey.
+        </p>
+      </div>
+    </section>
+
+    <div class="container section-padding">
+      <!-- Section 1: Our Story -->
+      <div class="about-split-row">
+        <div class="about-img-box">
+          <img src="https://images.unsplash.com/photo-1611591475103-4fa1b7765a7f?auto=format&fit=crop&w=1000&q=80" alt="Artisan selecting Austrian crystal beads" loading="lazy">
+        </div>
+        <div>
+          <span class="text-meta" style="color: var(--color-gold);">ORIGINS</span>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin: 6px 0 16px;">OUR STORY</h2>
+          <p class="lead" style="margin-bottom: 16px;">Bint &amp; Beads was founded on a simple conviction: beadwork is one of Africa’s highest artistic disciplines.</p>
+          <p style="margin-bottom: 16px;">Across generations, beads have marked ceremonies of passage, embodied royalty, celebrated feminine curves, and functioned as sacred heirlooms. Yet modern fashion had frequently relegated beadwork to fast-fashion novelties or uniform factory assembly.</p>
+          <p>We established our studio in Lagos to restore the tactile dignity of the craft. Every design honors traditional stringing traditions while embracing contemporary architectural silhouettes, rich noir palettes, and precious metallic finishes.</p>
+        </div>
+      </div>
+
+      <!-- Section 2: Craftsmanship -->
+      <div class="about-split-row reverse" id="craftsmanship">
+        <div class="about-img-box">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=80" alt="Freshwater baroque pearls and gold spacers" loading="lazy">
+        </div>
+        <div>
+          <span class="text-meta" style="color: var(--color-gold);">THE ATELIER PROCESS</span>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin: 6px 0 16px;">CRAFTED BY HAND</h2>
+          <p class="lead" style="margin-bottom: 16px;">No machines. No assembly lines. Only patient hands, good daylight, and uncompromising focus.</p>
+          <p style="margin-bottom: 16px;">Each piece requires hours of meticulous hand-selection. Beads are examined individually under natural studio daylight to ensure consistency in cut, light reflection, and weight. Faceted Austrian glass crystals are paired with natural freshwater pearls and durable 18k PVD gold-plated spacers resistant to tropical humidity.</p>
+          <div class="about-quote-box">
+            <div class="about-quote-text">
+              "When you wear an accessory made slowly by hand, you carry an artisan’s concentrated focus and genuine care wherever you go."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Pillars of Individuality -->
+      <div style="margin-top: 40px;">
+        <div class="section-header">
+          <span class="text-meta" style="color: var(--color-gold);">FOUNDING PRINCIPLES</span>
+          <h2>THE BEAUTY OF INDIVIDUALITY</h2>
+          <p>The core ethos that governs every design emerging from our studio.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <span class="text-meta" style="color: var(--color-gold);">01</span>
+            <h3>Singular Distinction</h3>
+            <p>We create in small, numbered studio batches. Our pieces are not mass produced for thousands, but crafted for patrons who appreciate exclusivity and personal nuance.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="text-meta" style="color: var(--color-gold);">02</span>
+            <h3>Bespoke Personalization</h3>
+            <p>Through our Custom Studio, clients can co-create their talisman. From personalized gold-leaf lettering to custom waist bead lengths, each commission is made to your exact body.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="text-meta" style="color: var(--color-gold);">03</span>
+            <h3>Heirloom Presentation</h3>
+            <p>From custom unbleached velvet pouches to hard-shell keepsake drawer boxes and hand wax-sealed notes, every order is treated as a ceremony from our hands to yours.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action Banner -->
+      <div style="background: var(--color-black); color: var(--color-white); border-radius: var(--radius-sm); padding: clamp(48px, 6vw, 72px) clamp(24px, 5vw, 64px); text-align: center; margin-top: clamp(60px, 8vw, 100px);">
+        <span class="text-meta" style="color: var(--color-gold);">BEGIN YOUR COMMISSION</span>
+        <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); color: var(--color-white); margin: 8px 0 16px;">EXPERIENCE BINT &amp; BEADS</h2>
+        <p style="color: var(--color-sand); max-width: 500px; margin: 0 auto 32px;">Discover our current ready-to-ship catalogue or design a personalized creation in our studio.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="shop.html" class="btn btn-gold btn-lg">Explore Catalogue</a>
+          <a href="customize.html" class="btn btn-outline-white btn-lg">Enter Custom Studio</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer id="bint-footer"></footer>
+
+  <!-- Universal Scripts -->
+  <script src="js/bint-core.js"></script>
+</body>
+</html>

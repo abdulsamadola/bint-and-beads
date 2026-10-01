@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Collections | BINT &amp; BEADS</title>
+  <meta name="description" content="Discover our curated beaded jewelry capsules: The Signature Collection, The Noir Collection, The Bridal Edit, Everyday Bint, and The Gift Edit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/emblem.svg">
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .collection-hero {
+      background-color: var(--color-black);
+      color: var(--color-white);
+      padding: clamp(60px, 8vw, 100px) 0 clamp(40px, 5vw, 60px);
+      text-align: center;
+      border-bottom: 1px solid rgba(198, 161, 91, 0.2);
+    }
+    .collections-editorial-list {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding: 60px 0 100px;
+    }
+    .collection-editorial-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: transform var(--transition-smooth);
+    }
+    @media (min-width: 900px) {
+      .collection-editorial-card {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+      .collection-editorial-card.reverse {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+      .collection-editorial-card.reverse .collection-card-media {
+        order: 2;
+      }
+    }
+    .collection-card-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: var(--color-rich-black);
+      overflow: hidden;
+    }
+    .collection-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .collection-editorial-card:hover .collection-card-img {
+      transform: scale(1.05);
+    }
+    .collection-card-text {
+      padding: clamp(24px, 4vw, 48px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .collection-card-text h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin: 8px 0 16px;
+    }
+    .collection-card-text p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside id="bint-announcement-bar"></aside>
+
+  <!-- Global Header -->
+  <header id="bint-header"></header>
+
+  <main id="main-content">
+    <section class="collection-hero">
+      <div class="container">
+        <span class="text-meta" style="color: var(--color-gold);">THE DESIGN VAULT</span>
+        <h1 style="font-size: clamp(2.4rem, 5vw, 3.8rem); font-family: var(--font-serif); margin-top: 8px;">CURATED COLLECTIONS</h1>
+        <p style="color: var(--color-sand); max-width: 600px; margin: 12px auto 0;">
+          Each capsule is anchored by a distinct philosophical rhythm — from brooding midnight obsidian to luminous wedding heirlooms.
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="breadcrumbs-separator">/</span>
+        <span class="breadcrumbs-current">Collections</span>
+      </nav>
+
+      <div class="collections-editorial-list">
+        <!-- 01: Signature -->
+        <article class="collection-editorial-card">
+          <div class="collection-card-media">
+            <img class="collection-card-img" src="https://images.unsplash.com/photo-1611591475103-4fa1b7765a7f?auto=format&fit=crop&w=1200&q=80" alt="The Signature Collection">
+          </div>
+          <div class="collection-card-text">
+            <span class="text-meta" style="color: var(--color-gold);">CAPSULE 01 &bull; CORE ICONOGRAPHY</span>
+            <h2>THE SIGNATURE COLLECTION</h2>
+            <p>The quintessential spirit of Bint &amp; Beads. High-tensile obsidian crystals layered with 18k gold-tone spacers and architectural bead geometry made for effortless daily distinction.</p>
+            <a href="shop.html?collection=signature" class="btn btn-primary">Explore The Signature Pieces &rarr;</a>
+          </div>
+        </article>
+
+        <!-- 02: Noir -->
+        <article class="collection-editorial-card reverse">
+          <div class="collection-card-media">
+            <img class="collection-card-img" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=80" alt="The Noir Collection">
+          </div>
+          <div class="collection-card-text">
+            <span class="text-meta" style="color: var(--color-gold);">CAPSULE 02 &bull; MONOCHROMATIC DEPTH</span>
+            <h2>THE NOIR COLLECTION</h2>
+            <p>Sculpted for those who find serenity in shadows. Features volcanic Icelandic lava beads, deep matte black onyx, and sterling silver accents tailored for understated elegance.</p>
+            <a href="shop.html?collection=noir" class="btn btn-primary">Explore The Noir Capsule &rarr;</a>
+          </div>
+        </article>
+
+        <!-- 03: Bridal -->
+        <article class="collection-editorial-card">
+          <div class="collection-card-media">
+            <img class="collection-card-img" src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=80" alt="The Bridal Edit">
+          </div>
+          <div class="collection-card-text">
+            <span class="text-meta" style="color: var(--color-gold);">CAPSULE 03 &bull; CELEBRATION HEIRLOOMS</span>
+            <h2>THE BRIDAL EDIT</h2>
+            <p>Lustrous organic baroque freshwater pearls, opalescent hues, and delicate golden filigree crafted for traditional introduction ceremonies, wedding receptions, and bridesmaids.</p>
+            <a href="shop.html?collection=bridal" class="btn btn-primary">Explore The Bridal Edit &rarr;</a>
+          </div>
+        </article>
+
+        <!-- 04: Everyday Bint -->
+        <article class="collection-editorial-card reverse">
+          <div class="collection-card-media">
+            <img class="collection-card-img" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80" alt="Everyday Bint">
+          </div>
+          <div class="collection-card-text">
+            <span class="text-meta" style="color: var(--color-gold);">CAPSULE 04 &bull; TACTILE DAILY LUXURY</span>
+            <h2>EVERYDAY BINT</h2>
+            <p>Lightweight stackable bracelets, minimalist collar halters, cowrie-accented anklets, and phone charms engineered for continuous, carefree daily wear.</p>
+            <a href="shop.html?collection=everyday" class="btn btn-primary">Explore Everyday Pieces &rarr;</a>
+          </div>
+        </article>
+
+        <!-- 05: The Gift Edit -->
+        <article class="collection-editorial-card">
+          <div class="collection-card-media">
+            <img class="collection-card-img" src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=80" alt="The Gift Edit">
+          </div>
+          <div class="collection-card-text">
+            <span class="text-meta" style="color: var(--color-gold);">CAPSULE 05 &bull; KEEPSAKE GESTURES</span>
+            <h2>THE GIFT EDIT</h2>
+            <p>Presentation sets pre-packaged with our signature hard-shell keepsake boxes, velvet jewelry rolls, and hand-waxed calligraphy message cards.</p>
+            <a href="shop.html?category=gift-sets" class="btn btn-primary">Discover Gift Suites &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer id="bint-footer"></footer>
+
+  <!-- Universal Scripts -->
+  <script src="js/bint-core.js"></script>
+</body>
+</html>
